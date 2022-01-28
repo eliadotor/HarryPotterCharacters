@@ -33,4 +33,8 @@ extension Character {
     var imageUrl: URL? {
         return URL(string: image)
     }
+    
+    var toListCellViewModel: ListTableCellViewModel {
+        return ListTableCellViewModel(imageUrl: imageUrl, text: name)
+    }
 }
