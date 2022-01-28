@@ -40,7 +40,7 @@
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ACV-AO-XKs">
                                                             <rect key="frame" x="50" y="0.0" width="344" height="50.5"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BBY-Vo-Ora">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z3c-os-bQp">
                                                                     <rect key="frame" x="10" y="10" width="324" height="30.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
@@ -49,10 +49,10 @@
                                                             </subviews>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                             <constraints>
-                                                                <constraint firstItem="BBY-Vo-Ora" firstAttribute="top" secondItem="ACV-AO-XKs" secondAttribute="top" constant="10" id="KzT-Oq-hPh"/>
-                                                                <constraint firstAttribute="bottom" secondItem="BBY-Vo-Ora" secondAttribute="bottom" constant="10" id="Mwd-M8-E2L"/>
-                                                                <constraint firstAttribute="trailing" secondItem="BBY-Vo-Ora" secondAttribute="trailing" constant="10" id="oqF-DW-0JJ"/>
-                                                                <constraint firstItem="BBY-Vo-Ora" firstAttribute="leading" secondItem="ACV-AO-XKs" secondAttribute="leading" constant="10" id="u4l-9t-QG6"/>
+                                                                <constraint firstAttribute="trailing" secondItem="Z3c-os-bQp" secondAttribute="trailing" constant="10" id="DN0-gK-gcV"/>
+                                                                <constraint firstItem="Z3c-os-bQp" firstAttribute="top" secondItem="ACV-AO-XKs" secondAttribute="top" constant="10" id="IsU-Hc-Ulh"/>
+                                                                <constraint firstItem="Z3c-os-bQp" firstAttribute="leading" secondItem="ACV-AO-XKs" secondAttribute="leading" constant="10" id="Kun-Ag-Myl"/>
+                                                                <constraint firstAttribute="bottom" secondItem="Z3c-os-bQp" secondAttribute="bottom" constant="10" id="f2O-Fw-gDJ"/>
                                                             </constraints>
                                                         </view>
                                                     </subviews>
@@ -67,7 +67,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="cellImage" destination="4lj-87-eVL" id="Vfs-2B-it4"/>
-                                            <outlet property="labelImage" destination="BBY-Vo-Ora" id="5oJ-Jk-h2z"/>
+                                            <outlet property="cellLabel" destination="Z3c-os-bQp" id="KO0-DT-Axg"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

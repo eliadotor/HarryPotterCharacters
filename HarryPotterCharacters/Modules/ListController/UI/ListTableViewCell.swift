@@ -16,7 +16,7 @@ struct ListTableCellViewModel {
 class ListTableViewCell: UITableViewCell {
 
     @IBOutlet weak var cellImage: UIImageView!
-    
+
     @IBOutlet weak var cellLabel: UILabel!
     
     func configure(viewModel: ListTableCellViewModel) {

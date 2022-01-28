@@ -22,7 +22,7 @@
 		45CE37A727A423CF007B6BC8 /* CharactersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CE37A627A423CF007B6BC8 /* CharactersProvider.swift */; };
 		45CE37AA27A42724007B6BC8 /* CharactersListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CE37A927A42724007B6BC8 /* CharactersListInteractor.swift */; };
 		45CE37AD27A42804007B6BC8 /* CharactersListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CE37AC27A42804007B6BC8 /* CharactersListPresenter.swift */; };
-		45CE37AF27A4298D007B6BC8 /* ListTableCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CE37AE27A4298D007B6BC8 /* ListTableCellViewModel.swift */; };
+		45CE37AF27A4298D007B6BC8 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CE37AE27A4298D007B6BC8 /* ListTableViewCell.swift */; };
 		45CE37B127A43822007B6BC8 /* ListControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CE37B027A43822007B6BC8 /* ListControllerBuilder.swift */; };
 		45CE37B327A43843007B6BC8 /* InitialControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CE37B227A43843007B6BC8 /* InitialControllerBuilder.swift */; };
 		45CE37B627A439A4007B6BC8 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CE37B527A439A4007B6BC8 /* UIViewControllerExtensions.swift */; };
@@ -68,7 +68,7 @@
 		45CE37A627A423CF007B6BC8 /* CharactersProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersProvider.swift; sourceTree = "<group>"; };
 		45CE37A927A42724007B6BC8 /* CharactersListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListInteractor.swift; sourceTree = "<group>"; };
 		45CE37AC27A42804007B6BC8 /* CharactersListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListPresenter.swift; sourceTree = "<group>"; };
-		45CE37AE27A4298D007B6BC8 /* ListTableCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableCellViewModel.swift; sourceTree = "<group>"; };
+		45CE37AE27A4298D007B6BC8 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		45CE37B027A43822007B6BC8 /* ListControllerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListControllerBuilder.swift; sourceTree = "<group>"; };
 		45CE37B227A43843007B6BC8 /* InitialControllerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialControllerBuilder.swift; sourceTree = "<group>"; };
 		45CE37B527A439A4007B6BC8 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
@@ -198,7 +198,7 @@
 			children = (
 				45CE37A127A42036007B6BC8 /* ListViewController.storyboard */,
 				45CE37A327A42050007B6BC8 /* ListViewController.swift */,
-				45CE37AE27A4298D007B6BC8 /* ListTableCellViewModel.swift */,
+				45CE37AE27A4298D007B6BC8 /* ListTableViewCell.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -498,7 +498,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				45CE376A27A41C72007B6BC8 /* AppDelegate.swift in Sources */,
-				45CE37AF27A4298D007B6BC8 /* ListTableCellViewModel.swift in Sources */,
+				45CE37AF27A4298D007B6BC8 /* ListTableViewCell.swift in Sources */,
 				45CE376C27A41C72007B6BC8 /* SceneDelegate.swift in Sources */,
 				45CE37B127A43822007B6BC8 /* ListControllerBuilder.swift in Sources */,
 				45CE37B627A439A4007B6BC8 /* UIViewControllerExtensions.swift in Sources */,
