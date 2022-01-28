@@ -9,13 +9,12 @@
 /* Begin PBXBuildFile section */
 		45CE376A27A41C72007B6BC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CE376927A41C72007B6BC8 /* AppDelegate.swift */; };
 		45CE376C27A41C72007B6BC8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CE376B27A41C72007B6BC8 /* SceneDelegate.swift */; };
-		45CE376E27A41C72007B6BC8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CE376D27A41C72007B6BC8 /* ViewController.swift */; };
-		45CE377127A41C72007B6BC8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45CE376F27A41C72007B6BC8 /* Main.storyboard */; };
 		45CE377327A41C76007B6BC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45CE377227A41C76007B6BC8 /* Assets.xcassets */; };
 		45CE377627A41C76007B6BC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45CE377427A41C76007B6BC8 /* LaunchScreen.storyboard */; };
 		45CE378127A41C77007B6BC8 /* HarryPotterCharactersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CE378027A41C77007B6BC8 /* HarryPotterCharactersTests.swift */; };
 		45CE378B27A41C77007B6BC8 /* HarryPotterCharactersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CE378A27A41C77007B6BC8 /* HarryPotterCharactersUITests.swift */; };
 		45CE378D27A41C77007B6BC8 /* HarryPotterCharactersUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CE378C27A41C77007B6BC8 /* HarryPotterCharactersUITestsLaunchTests.swift */; };
+		45CE379B27A41D2B007B6BC8 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CE379A27A41D2B007B6BC8 /* Character.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +38,6 @@
 		45CE376627A41C72007B6BC8 /* HarryPotterCharacters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HarryPotterCharacters.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45CE376927A41C72007B6BC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45CE376B27A41C72007B6BC8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		45CE376D27A41C72007B6BC8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		45CE377027A41C72007B6BC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		45CE377227A41C76007B6BC8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		45CE377527A41C76007B6BC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		45CE377727A41C76007B6BC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +46,7 @@
 		45CE378627A41C77007B6BC8 /* HarryPotterCharactersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HarryPotterCharactersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		45CE378A27A41C77007B6BC8 /* HarryPotterCharactersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarryPotterCharactersUITests.swift; sourceTree = "<group>"; };
 		45CE378C27A41C77007B6BC8 /* HarryPotterCharactersUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarryPotterCharactersUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		45CE379A27A41D2B007B6BC8 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +97,9 @@
 		45CE376827A41C72007B6BC8 /* HarryPotterCharacters */ = {
 			isa = PBXGroup;
 			children = (
+				45CE379927A41D07007B6BC8 /* Models */,
 				45CE376927A41C72007B6BC8 /* AppDelegate.swift */,
 				45CE376B27A41C72007B6BC8 /* SceneDelegate.swift */,
-				45CE376D27A41C72007B6BC8 /* ViewController.swift */,
-				45CE376F27A41C72007B6BC8 /* Main.storyboard */,
 				45CE377227A41C76007B6BC8 /* Assets.xcassets */,
 				45CE377427A41C76007B6BC8 /* LaunchScreen.storyboard */,
 				45CE377727A41C76007B6BC8 /* Info.plist */,
@@ -125,6 +122,14 @@
 				45CE378C27A41C77007B6BC8 /* HarryPotterCharactersUITestsLaunchTests.swift */,
 			);
 			path = HarryPotterCharactersUITests;
+			sourceTree = "<group>";
+		};
+		45CE379927A41D07007B6BC8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				45CE379A27A41D2B007B6BC8 /* Character.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +238,6 @@
 			files = (
 				45CE377627A41C76007B6BC8 /* LaunchScreen.storyboard in Resources */,
 				45CE377327A41C76007B6BC8 /* Assets.xcassets in Resources */,
-				45CE377127A41C72007B6BC8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +262,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45CE376E27A41C72007B6BC8 /* ViewController.swift in Sources */,
 				45CE376A27A41C72007B6BC8 /* AppDelegate.swift in Sources */,
 				45CE376C27A41C72007B6BC8 /* SceneDelegate.swift in Sources */,
+				45CE379B27A41D2B007B6BC8 /* Character.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +301,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		45CE376F27A41C72007B6BC8 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				45CE377027A41C72007B6BC8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		45CE377427A41C76007B6BC8 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
