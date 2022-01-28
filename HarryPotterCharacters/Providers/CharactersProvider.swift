@@ -21,7 +21,7 @@ class NetworkCharactersProvider: CharacterProviderContract {
     }
     
     func getCharacters(_ completion: @escaping (Result<[Character], CharacterProviderError>) -> ()) {
-        guard let url = URL(string: "http://hp-api.herokuapp.com/api/characters/staff") else {
+        guard let url = URL(string: "http://hp-api.herokuapp.com/api/characters") else {
             completion(.failure(.badUrl))
             return
         }

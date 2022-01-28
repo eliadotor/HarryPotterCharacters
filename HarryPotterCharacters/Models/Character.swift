@@ -28,13 +28,20 @@ struct Character : Codable {
     let image: String
 }
 
-
 extension Character {
     var imageUrl: URL? {
         return URL(string: image)
     }
+        
+    var houseCharacter: String {
+        if house == "" {
+           return "Hogwarts"
+        } else {
+            return house
+        }
+    }
     
     var toListCellViewModel: ListTableCellViewModel {
-        return ListTableCellViewModel(imageUrl: imageUrl, text: name)
+        return ListTableCellViewModel(imageUrl: imageUrl, text: name, house: houseCharacter)
     }
 }

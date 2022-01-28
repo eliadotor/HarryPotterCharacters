@@ -8,8 +8,6 @@
 import UIKit
 
 class ListViewController: UIViewController {
-    
-    
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -28,10 +26,7 @@ class ListViewController: UIViewController {
             self.tableView.reloadData()
         }
     }
-
 }
-
-
 
 extension ListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -42,9 +37,7 @@ extension ListViewController: UITableViewDataSource {
         guard let viewModel = presenter?.cellViewModel(at: indexPath), let cell = tableView.dequeueReusableCell(withIdentifier: "ListTableViewCell", for: indexPath) as? ListTableViewCell else {
             fatalError()
         }
-        
         cell.configure(viewModel: viewModel)
-        
         return cell
     }
 }

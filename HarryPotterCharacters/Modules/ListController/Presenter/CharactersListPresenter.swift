@@ -56,5 +56,5 @@ extension CharactersListPresenter: ListInteractorOutputContract {
     func fetchDidFail() {
         print("Error")
     }
-    
+
 }
