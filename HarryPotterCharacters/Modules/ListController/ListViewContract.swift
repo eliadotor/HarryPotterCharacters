@@ -1,0 +1,41 @@
+//
+//  ListContract.swift
+//  HarryPotterCharacters
+//
+//  Created by Elia Dotor Puente on 28/1/22.
+//
+
+import Foundation
+import UIKit
+
+protocol ListViewContract: UIViewController {
+    var presenter: ListPresenterContract? {set get}
+    func reloadData()
+}
+
+protocol ListPresenterContract: AnyObject {
+    var view: ListViewController? {set get}
+    var interactor: ListInteractorContract? {set get}
+    var numItems: Int {get}
+    
+    func viewDidLoad()
+    func cellViewModel(at indexPath: IndexPath) -> ListTableCellViewModel
+    func didSelectItem(at indexPath: IndexPath)
+
+}
+
+protocol ListInteractorContract {
+    var catsProvider: CharacterProviderContract? {get set}
+    var output: ListInteractorOutputContract? {get set}
+    func fetchItems()
+}
+
+protocol ListInteractorOutputContract: AnyObject {
+    func didFetch(characters: [Character])
+    func fetchDidFail()
+
+}
+
+protocol CharacterProviderContract {
+    func getCharacters(_ completion: @escaping (Result<[Character], CharacterProviderError>) -> ())
+}
