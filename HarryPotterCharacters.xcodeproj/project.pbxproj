@@ -23,6 +23,9 @@
 		45CE37AA27A42724007B6BC8 /* CharactersListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CE37A927A42724007B6BC8 /* CharactersListInteractor.swift */; };
 		45CE37AD27A42804007B6BC8 /* CharactersListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CE37AC27A42804007B6BC8 /* CharactersListPresenter.swift */; };
 		45CE37AF27A4298D007B6BC8 /* ListTableCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CE37AE27A4298D007B6BC8 /* ListTableCellViewModel.swift */; };
+		45CE37B127A43822007B6BC8 /* ListControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CE37B027A43822007B6BC8 /* ListControllerBuilder.swift */; };
+		45CE37B327A43843007B6BC8 /* InitialControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CE37B227A43843007B6BC8 /* InitialControllerBuilder.swift */; };
+		45CE37B627A439A4007B6BC8 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CE37B527A439A4007B6BC8 /* UIViewControllerExtensions.swift */; };
 		7236A5D17B389E8BE088F154 /* Pods_HarryPotterCharacters_HarryPotterCharactersUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4421CE28EF2B6FB61E7A101E /* Pods_HarryPotterCharacters_HarryPotterCharactersUITests.framework */; };
 		CBB6801B8952BAFA466F7C82 /* Pods_HarryPotterCharacters.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B20039BEEBAD1A817D0D43F7 /* Pods_HarryPotterCharacters.framework */; };
 /* End PBXBuildFile section */
@@ -66,6 +69,9 @@
 		45CE37A927A42724007B6BC8 /* CharactersListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListInteractor.swift; sourceTree = "<group>"; };
 		45CE37AC27A42804007B6BC8 /* CharactersListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListPresenter.swift; sourceTree = "<group>"; };
 		45CE37AE27A4298D007B6BC8 /* ListTableCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableCellViewModel.swift; sourceTree = "<group>"; };
+		45CE37B027A43822007B6BC8 /* ListControllerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListControllerBuilder.swift; sourceTree = "<group>"; };
+		45CE37B227A43843007B6BC8 /* InitialControllerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialControllerBuilder.swift; sourceTree = "<group>"; };
+		45CE37B527A439A4007B6BC8 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		7C101858823A64266ADCA2EB /* Pods-HarryPotterCharacters.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HarryPotterCharacters.release.xcconfig"; path = "Target Support Files/Pods-HarryPotterCharacters/Pods-HarryPotterCharacters.release.xcconfig"; sourceTree = "<group>"; };
 		AD8813C59D25416E659F67FA /* Pods-HarryPotterCharacters-HarryPotterCharactersUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HarryPotterCharacters-HarryPotterCharactersUITests.release.xcconfig"; path = "Target Support Files/Pods-HarryPotterCharacters-HarryPotterCharactersUITests/Pods-HarryPotterCharacters-HarryPotterCharactersUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B20039BEEBAD1A817D0D43F7 /* Pods_HarryPotterCharacters.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HarryPotterCharacters.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,6 +134,7 @@
 		45CE376827A41C72007B6BC8 /* HarryPotterCharacters */ = {
 			isa = PBXGroup;
 			children = (
+				45CE37B427A43983007B6BC8 /* Extensions */,
 				45CE37A527A423AD007B6BC8 /* Providers */,
 				45CE379C27A41E88007B6BC8 /* Modules */,
 				45CE379927A41D07007B6BC8 /* Models */,
@@ -169,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				45CE379D27A41EA1007B6BC8 /* ListController */,
+				45CE37B227A43843007B6BC8 /* InitialControllerBuilder.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -180,6 +188,7 @@
 				45CE37AB27A427E8007B6BC8 /* Presenter */,
 				45CE37A027A42016007B6BC8 /* UI */,
 				45CE379E27A41F8A007B6BC8 /* ListViewContract.swift */,
+				45CE37B027A43822007B6BC8 /* ListControllerBuilder.swift */,
 			);
 			path = ListController;
 			sourceTree = "<group>";
@@ -216,6 +225,14 @@
 				45CE37AC27A42804007B6BC8 /* CharactersListPresenter.swift */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		45CE37B427A43983007B6BC8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				45CE37B527A439A4007B6BC8 /* UIViewControllerExtensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		52B8273C90D52B1315110375 /* Frameworks */ = {
@@ -483,9 +500,12 @@
 				45CE376A27A41C72007B6BC8 /* AppDelegate.swift in Sources */,
 				45CE37AF27A4298D007B6BC8 /* ListTableCellViewModel.swift in Sources */,
 				45CE376C27A41C72007B6BC8 /* SceneDelegate.swift in Sources */,
+				45CE37B127A43822007B6BC8 /* ListControllerBuilder.swift in Sources */,
+				45CE37B627A439A4007B6BC8 /* UIViewControllerExtensions.swift in Sources */,
 				45CE379B27A41D2B007B6BC8 /* Character.swift in Sources */,
 				45CE37A427A42050007B6BC8 /* ListViewController.swift in Sources */,
 				45CE37AD27A42804007B6BC8 /* CharactersListPresenter.swift in Sources */,
+				45CE37B327A43843007B6BC8 /* InitialControllerBuilder.swift in Sources */,
 				45CE37A727A423CF007B6BC8 /* CharactersProvider.swift in Sources */,
 				45CE379F27A41F8A007B6BC8 /* ListViewContract.swift in Sources */,
 				45CE37AA27A42724007B6BC8 /* CharactersListInteractor.swift in Sources */,
@@ -665,7 +685,6 @@
 				INFOPLIST_FILE = HarryPotterCharacters/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -694,7 +713,6 @@
 				INFOPLIST_FILE = HarryPotterCharacters/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
