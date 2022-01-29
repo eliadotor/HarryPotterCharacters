@@ -44,4 +44,8 @@ extension Character {
     var toListCellViewModel: ListTableCellViewModel {
         return ListTableCellViewModel(imageUrl: imageUrl, text: name, house: houseCharacter)
     }
+    
+    var toDetailViewModel: DetailViewModel {
+        return DetailViewModel(name: name, imageUrl: imageUrl, house: houseCharacter, dateOfBirth: dateOfBirth, patronus: patronus, actor: actor)
+    }
 }

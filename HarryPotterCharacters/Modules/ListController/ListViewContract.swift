@@ -39,3 +39,8 @@ protocol ListInteractorOutputContract: AnyObject {
 protocol CharacterProviderContract {
     func getCharacters(_ completion: @escaping (Result<[Character], CharacterProviderError>) -> ())
 }
+
+protocol CharactersListWireframeContract {
+    var view: UIViewController? {get set}
+    func navigate(to character: Character)
+}

@@ -12,9 +12,9 @@ class CharactersListPresenter: ListPresenterContract {
     
     
     weak var view: ListViewController?
-    
     var interactor: ListInteractorContract?
-    
+    var wireframe: CharactersListWireframeContract?
+
     private var characters = [Character]() {
         didSet {
             view?.reloadData()
@@ -36,8 +36,8 @@ class CharactersListPresenter: ListPresenterContract {
     }
     
     func didSelectItem(at indexPath: IndexPath) {
-//        let character = characters[indexPath.row]
-//        wireframe?.navigate(to: character)
+        let character = characters[indexPath.row]
+        wireframe?.navigate(to: character)
 
     }
     

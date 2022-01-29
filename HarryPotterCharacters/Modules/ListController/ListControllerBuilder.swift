@@ -17,12 +17,12 @@ class ListControllerBuilder {
         let interactor = CharactersListInteractor()
         interactor.charactersProvider = NetworkCharactersProvider()
         
-//        let wireframe = CatsListWireframe()
+        let wireframe = CharactersListWireframe()
         viewController.presenter = presenter
         presenter.view = viewController
         presenter.interactor = interactor
-        //presenter.wireframe = wireframe
-        //wireframe.view = viewController
+        presenter.wireframe = wireframe
+        wireframe.view = viewController
         return viewController
     }
         
