@@ -1,20 +1,20 @@
 //
-//  CharactersListWireframe.swift
+//  HouseCollectionWireframe.swift
 //  HarryPotterCharacters
 //
-//  Created by Elia Dotor Puente on 29/1/22.
+//  Created by Elia Dotor Puente on 30/1/22.
 //
 
 import Foundation
 import UIKit
 
 
-class CharactersListWireframe: CharactersListWireframeContract {
+class HousesCollectionWireframe: HousesCollectionWireframeContract {
     weak var view: UIViewController?
     
-    func navigate(to character: Character) {
+    func navigate(to house: String) {
         DispatchQueue.main.async {
-            let viewController = DetailControllerBuilder().build(viewModel: character.toDetailViewModel)
+            let viewController = ListControllerBuilder().build()
             if let navigationController = self.view?.navigationController {
                 navigationController.pushViewController(viewController, animated: true)
             } else {
