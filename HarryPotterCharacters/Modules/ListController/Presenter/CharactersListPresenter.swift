@@ -11,13 +11,15 @@ import Foundation
 class CharactersListPresenter: ListPresenterContract {
     
     
-    weak var view: ListViewController?
+    weak var viewList: ListViewController?
+    weak var viewCollection: CollectionViewController?
     var interactor: ListInteractorContract?
     var wireframe: CharactersListWireframeContract?
 
     private var characters = [Character]() {
         didSet {
-            view?.reloadData()
+            viewList?.reloadData()
+            viewCollection?.reloadData()
         }
     }
 
@@ -33,6 +35,11 @@ class CharactersListPresenter: ListPresenterContract {
     func cellViewModel(at indexPath: IndexPath) -> ListTableCellViewModel {
         let item = characters[indexPath.row]
         return item.toListCellViewModel
+    }
+    
+    func cellCollectionViewModel(at indexPath: IndexPath) -> CollectionCellViewModel {
+        let item = characters[indexPath.row]
+        return item.toCollectionCellViewModel
     }
     
     func didSelectItem(at indexPath: IndexPath) {

@@ -14,8 +14,8 @@ struct WandViewModel {
 }
 
 struct DetailViewModel {
-    let name: String
     let imageUrl: URL?
+    let name: String
     let house: String
     let dateOfBirth: String
     let patronus: String

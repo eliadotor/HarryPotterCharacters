@@ -10,6 +10,10 @@
 		2713DB89925E9E17BDDF5969 /* Pods_HarryPotterCharactersTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5201EBC356CAEF92A054C8F /* Pods_HarryPotterCharactersTests.framework */; };
 		453A6D0227A54D580000AE1B /* DetailControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453A6D0127A54D580000AE1B /* DetailControllerBuilder.swift */; };
 		453A6D0527A54E730000AE1B /* CharactersListWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453A6D0427A54E730000AE1B /* CharactersListWireframe.swift */; };
+		453A6D0827A6B6A40000AE1B /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453A6D0727A6B6A40000AE1B /* CollectionViewController.swift */; };
+		453A6D0A27A6B6B40000AE1B /* CollectionViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 453A6D0927A6B6B40000AE1B /* CollectionViewController.storyboard */; };
+		453A6D0C27A6B8680000AE1B /* CollectionControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453A6D0B27A6B8680000AE1B /* CollectionControllerBuilder.swift */; };
+		453A6D0E27A6B8AC0000AE1B /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453A6D0D27A6B8AC0000AE1B /* CollectionViewCell.swift */; };
 		45CE376A27A41C72007B6BC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CE376927A41C72007B6BC8 /* AppDelegate.swift */; };
 		45CE376C27A41C72007B6BC8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CE376B27A41C72007B6BC8 /* SceneDelegate.swift */; };
 		45CE377327A41C76007B6BC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45CE377227A41C76007B6BC8 /* Assets.xcassets */; };
@@ -56,6 +60,10 @@
 		4421CE28EF2B6FB61E7A101E /* Pods_HarryPotterCharacters_HarryPotterCharactersUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HarryPotterCharacters_HarryPotterCharactersUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		453A6D0127A54D580000AE1B /* DetailControllerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailControllerBuilder.swift; sourceTree = "<group>"; };
 		453A6D0427A54E730000AE1B /* CharactersListWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListWireframe.swift; sourceTree = "<group>"; };
+		453A6D0727A6B6A40000AE1B /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		453A6D0927A6B6B40000AE1B /* CollectionViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CollectionViewController.storyboard; sourceTree = "<group>"; };
+		453A6D0B27A6B8680000AE1B /* CollectionControllerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionControllerBuilder.swift; sourceTree = "<group>"; };
+		453A6D0D27A6B8AC0000AE1B /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		45CE376627A41C72007B6BC8 /* HarryPotterCharacters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HarryPotterCharacters.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45CE376927A41C72007B6BC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45CE376B27A41C72007B6BC8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -125,6 +133,17 @@
 			path = Wireframe;
 			sourceTree = "<group>";
 		};
+		453A6D0627A6B6400000AE1B /* Collection */ = {
+			isa = PBXGroup;
+			children = (
+				453A6D0927A6B6B40000AE1B /* CollectionViewController.storyboard */,
+				453A6D0727A6B6A40000AE1B /* CollectionViewController.swift */,
+				453A6D0B27A6B8680000AE1B /* CollectionControllerBuilder.swift */,
+				453A6D0D27A6B8AC0000AE1B /* CollectionViewCell.swift */,
+			);
+			path = Collection;
+			sourceTree = "<group>";
+		};
 		45CE375D27A41C72007B6BC8 = {
 			isa = PBXGroup;
 			children = (
@@ -191,6 +210,7 @@
 		45CE379C27A41E88007B6BC8 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				453A6D0627A6B6400000AE1B /* Collection */,
 				45CE37B727A47144007B6BC8 /* Detail */,
 				45CE379D27A41EA1007B6BC8 /* ListController */,
 				45CE37B227A43843007B6BC8 /* InitialControllerBuilder.swift */,
@@ -403,6 +423,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				453A6D0A27A6B6B40000AE1B /* CollectionViewController.storyboard in Resources */,
 				45CE37C027A4731F007B6BC8 /* DetailViewController.storyboard in Resources */,
 				45CE377627A41C76007B6BC8 /* LaunchScreen.storyboard in Resources */,
 				45CE377327A41C76007B6BC8 /* Assets.xcassets in Resources */,
@@ -536,8 +557,10 @@
 			files = (
 				45CE37BC27A47199007B6BC8 /* DetailViewController.swift in Sources */,
 				45CE376A27A41C72007B6BC8 /* AppDelegate.swift in Sources */,
+				453A6D0E27A6B8AC0000AE1B /* CollectionViewCell.swift in Sources */,
 				45CE37AF27A4298D007B6BC8 /* ListTableViewCell.swift in Sources */,
 				45CE376C27A41C72007B6BC8 /* SceneDelegate.swift in Sources */,
+				453A6D0827A6B6A40000AE1B /* CollectionViewController.swift in Sources */,
 				45CE37B127A43822007B6BC8 /* ListControllerBuilder.swift in Sources */,
 				45CE37B627A439A4007B6BC8 /* UIViewControllerExtensions.swift in Sources */,
 				45CE379B27A41D2B007B6BC8 /* Character.swift in Sources */,
@@ -547,6 +570,7 @@
 				45CE37B327A43843007B6BC8 /* InitialControllerBuilder.swift in Sources */,
 				453A6D0227A54D580000AE1B /* DetailControllerBuilder.swift in Sources */,
 				45CE37A727A423CF007B6BC8 /* CharactersProvider.swift in Sources */,
+				453A6D0C27A6B8680000AE1B /* CollectionControllerBuilder.swift in Sources */,
 				45CE379F27A41F8A007B6BC8 /* ListViewContract.swift in Sources */,
 				45CE37AA27A42724007B6BC8 /* CharactersListInteractor.swift in Sources */,
 			);

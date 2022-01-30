@@ -10,18 +10,17 @@ import Kingfisher
 
 struct ListTableCellViewModel {
     let imageUrl: URL?
-    let text: String
+    let name: String
     let house: String
 }
 
 class ListTableViewCell: UITableViewCell {
-    let imagenAlternativa = UIImage(systemName: "qrcode.viewfinder")
     @IBOutlet weak var cellImage: UIImageView!
 
     @IBOutlet weak var cellLabel: UILabel!
     
     func configure(viewModel: ListTableCellViewModel) {
-        cellLabel.text = viewModel.text
+        cellLabel.text = viewModel.name
         cellImage.kf.indicatorType = .activity
         cellImage.kf.setImage(with: viewModel.imageUrl, placeholder: UIImage(named: viewModel.house))
     }

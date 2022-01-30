@@ -14,12 +14,14 @@ protocol ListViewContract: UIViewController {
 }
 
 protocol ListPresenterContract: AnyObject {
-    var view: ListViewController? {set get}
+    var viewList: ListViewController? {set get}
+    var viewCollection: CollectionViewController? {set get}
     var interactor: ListInteractorContract? {set get}
     var numItems: Int {get}
     
     func viewDidLoad()
     func cellViewModel(at indexPath: IndexPath) -> ListTableCellViewModel
+    func cellCollectionViewModel(at indexPath: IndexPath) -> CollectionCellViewModel
     func didSelectItem(at indexPath: IndexPath)
 
 }

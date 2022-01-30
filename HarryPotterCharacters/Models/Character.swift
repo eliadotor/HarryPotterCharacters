@@ -42,10 +42,14 @@ extension Character {
     }
     
     var toListCellViewModel: ListTableCellViewModel {
-        return ListTableCellViewModel(imageUrl: imageUrl, text: name, house: houseCharacter)
+        return ListTableCellViewModel(imageUrl: imageUrl, name: name, house: houseCharacter)
     }
     
     var toDetailViewModel: DetailViewModel {
-        return DetailViewModel(name: name, imageUrl: imageUrl, house: houseCharacter, dateOfBirth: dateOfBirth, patronus: patronus, actor: actor)
+        return DetailViewModel(imageUrl: imageUrl, name: name, house: houseCharacter, dateOfBirth: dateOfBirth, patronus: patronus, actor: actor)
+    }
+    
+    var toCollectionCellViewModel: CollectionCellViewModel {
+        return CollectionCellViewModel(imageUrl: imageUrl, name: name, house: houseCharacter)
     }
 }
