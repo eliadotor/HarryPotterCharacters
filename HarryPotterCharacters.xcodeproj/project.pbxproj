@@ -24,6 +24,7 @@
 		453A6D2F27A707740000AE1B /* HousesViewContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453A6D2E27A707740000AE1B /* HousesViewContract.swift */; };
 		453A6D3127A70BD90000AE1B /* HousesCollectionInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453A6D3027A70BD90000AE1B /* HousesCollectionInteractor.swift */; };
 		453A6D3327A713600000AE1B /* HouseCollectionWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453A6D3227A713600000AE1B /* HouseCollectionWireframe.swift */; };
+		453A6D3927A74A030000AE1B /* CollectionInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453A6D3827A74A030000AE1B /* CollectionInteractor.swift */; };
 		45CE376A27A41C72007B6BC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CE376927A41C72007B6BC8 /* AppDelegate.swift */; };
 		45CE376C27A41C72007B6BC8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CE376B27A41C72007B6BC8 /* SceneDelegate.swift */; };
 		45CE377327A41C76007B6BC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45CE377227A41C76007B6BC8 /* Assets.xcassets */; };
@@ -84,6 +85,7 @@
 		453A6D2E27A707740000AE1B /* HousesViewContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousesViewContract.swift; sourceTree = "<group>"; };
 		453A6D3027A70BD90000AE1B /* HousesCollectionInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousesCollectionInteractor.swift; sourceTree = "<group>"; };
 		453A6D3227A713600000AE1B /* HouseCollectionWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseCollectionWireframe.swift; sourceTree = "<group>"; };
+		453A6D3827A74A030000AE1B /* CollectionInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionInteractor.swift; sourceTree = "<group>"; };
 		45CE376627A41C72007B6BC8 /* HarryPotterCharacters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HarryPotterCharacters.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45CE376927A41C72007B6BC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45CE376B27A41C72007B6BC8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 			children = (
 				453A6D1A27A6EB4A0000AE1B /* UI */,
 				453A6D0B27A6B8680000AE1B /* CollectionControllerBuilder.swift */,
+				453A6D3827A74A030000AE1B /* CollectionInteractor.swift */,
 			);
 			path = Collection;
 			sourceTree = "<group>";
@@ -653,6 +656,7 @@
 				45CE376C27A41C72007B6BC8 /* SceneDelegate.swift in Sources */,
 				453A6D0827A6B6A40000AE1B /* CollectionViewController.swift in Sources */,
 				453A6D3127A70BD90000AE1B /* HousesCollectionInteractor.swift in Sources */,
+				453A6D3927A74A030000AE1B /* CollectionInteractor.swift in Sources */,
 				45CE37B127A43822007B6BC8 /* ListControllerBuilder.swift in Sources */,
 				45CE37B627A439A4007B6BC8 /* UIViewControllerExtensions.swift in Sources */,
 				453A6D2B27A6F37A0000AE1B /* HousesCollectionControllerBuilder.swift in Sources */,

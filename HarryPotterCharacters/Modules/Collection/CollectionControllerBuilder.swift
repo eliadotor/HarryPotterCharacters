@@ -15,7 +15,7 @@ class CollectionControllerBuilder {
         viewController.navigationItem.title = "Characters"
         let presenter = CharactersListPresenter()
         let interactor = CharactersListInteractor()
-        interactor.charactersProvider = NetworkCharactersProvider()
+        interactor.charactersProvider = NetworkCharactersProvider(session: .default, house: "")
         
         let wireframe = CharactersListWireframe()
         viewController.presenter = presenter

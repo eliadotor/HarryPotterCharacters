@@ -15,13 +15,15 @@ enum CharacterProviderError: Error {
 
 class NetworkCharactersProvider: CharacterProviderContract {
     private let session: Session
+    private let house: String
     
-    init(session: Session = .default) {
+    init(session: Session = .default, house: String = "") {
         self.session = session
+        self.house = house
     }
     
     func getCharacters(_ completion: @escaping (Result<[Character], CharacterProviderError>) -> ()) {
-        guard let url = URL(string: "http://hp-api.herokuapp.com/api/characters") else {
+        guard let url = URL(string: "http://hp-api.herokuapp.com/api/characters/\(house)") else {
             completion(.failure(.badUrl))
             return
         }
@@ -35,6 +37,5 @@ class NetworkCharactersProvider: CharacterProviderContract {
             }
         }.validate()
     }
-    
     
 }

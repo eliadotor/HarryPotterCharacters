@@ -14,7 +14,7 @@ class HousesCollectionWireframe: HousesCollectionWireframeContract {
     
     func navigate(to house: String) {
         DispatchQueue.main.async {
-            let viewController = ListControllerBuilder().build()
+            let viewController = ListControllerBuilder().build(house: house)
             if let navigationController = self.view?.navigationController {
                 navigationController.pushViewController(viewController, animated: true)
             } else {
