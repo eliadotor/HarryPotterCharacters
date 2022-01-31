@@ -26,7 +26,7 @@ class CollectionViewCell: UICollectionViewCell {
         cellCollectionImage.kf.setImage(with: viewModel.imageUrl, placeholder: UIImage(named: viewModel.house))
         
         contentView.layer.borderColor = UIColor.gray.cgColor
-        contentView.layer.cornerRadius = 10
+        contentView.layer.cornerRadius = 5
         contentView.layer.masksToBounds = true
         layer.shadowColor = UIColor.gray.cgColor
         layer.shadowOffset = .init(width: 2.0, height: 3.0)

@@ -35,11 +35,11 @@ class CollectionViewController: UIViewController {
     
     private var layout: UICollectionViewFlowLayout {
         let layout = UICollectionViewFlowLayout()
-        layout.minimumInteritemSpacing = 20
-        layout.minimumLineSpacing = 20
-        layout.sectionInset = UIEdgeInsets(top: 20, left: 20, bottom: 30, right: 20)
-        let width = (collectionView.frame.width / 2) - (layout.minimumInteritemSpacing/2) - layout.sectionInset.left
-        layout.itemSize = CGSize(width: width, height: width)
+        layout.minimumInteritemSpacing = 10
+        layout.minimumLineSpacing = 10
+        layout.sectionInset = UIEdgeInsets(top: 20, left: 10, bottom: 20, right: 10)
+        let width = (collectionView.frame.width / 3) - (layout.minimumInteritemSpacing/3) - layout.sectionInset.left
+        layout.itemSize = CGSize(width: width, height: width*2-(width/4))
         return layout
     }
 }
