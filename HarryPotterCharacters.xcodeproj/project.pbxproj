@@ -24,6 +24,15 @@
 		453A6D2F27A707740000AE1B /* HousesViewContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453A6D2E27A707740000AE1B /* HousesViewContract.swift */; };
 		453A6D3127A70BD90000AE1B /* HousesCollectionInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453A6D3027A70BD90000AE1B /* HousesCollectionInteractor.swift */; };
 		453A6D3327A713600000AE1B /* HouseCollectionWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453A6D3227A713600000AE1B /* HouseCollectionWireframe.swift */; };
+		45CDAF9D27A8607000FE3C73 /* UserFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CDAF9C27A8607000FE3C73 /* UserFormViewController.swift */; };
+		45CDAF9F27A8609900FE3C73 /* UserFormViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45CDAF9E27A8609900FE3C73 /* UserFormViewController.storyboard */; };
+		45CDAFA327A861EF00FE3C73 /* UserFormContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CDAFA227A861EF00FE3C73 /* UserFormContract.swift */; };
+		45CDAFA527A8620F00FE3C73 /* UserFormBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CDAFA427A8620F00FE3C73 /* UserFormBuilder.swift */; };
+		45CDAFA727A8629E00FE3C73 /* UserFormInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CDAFA627A8629E00FE3C73 /* UserFormInteractor.swift */; };
+		45CDAFA927A862D400FE3C73 /* UserFormPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CDAFA827A862D400FE3C73 /* UserFormPresenter.swift */; };
+		45CDAFAB27A8631400FE3C73 /* UserFormProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CDAFAA27A8631400FE3C73 /* UserFormProvider.swift */; };
+		45CDAFAD27A887B600FE3C73 /* UserFormModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CDAFAC27A887B600FE3C73 /* UserFormModel.swift */; };
+		45CDAFAF27A887F000FE3C73 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CDAFAE27A887F000FE3C73 /* StringExtensions.swift */; };
 		45CE376A27A41C72007B6BC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CE376927A41C72007B6BC8 /* AppDelegate.swift */; };
 		45CE376C27A41C72007B6BC8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CE376B27A41C72007B6BC8 /* SceneDelegate.swift */; };
 		45CE377327A41C76007B6BC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45CE377227A41C76007B6BC8 /* Assets.xcassets */; };
@@ -84,6 +93,15 @@
 		453A6D2E27A707740000AE1B /* HousesViewContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousesViewContract.swift; sourceTree = "<group>"; };
 		453A6D3027A70BD90000AE1B /* HousesCollectionInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousesCollectionInteractor.swift; sourceTree = "<group>"; };
 		453A6D3227A713600000AE1B /* HouseCollectionWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseCollectionWireframe.swift; sourceTree = "<group>"; };
+		45CDAF9C27A8607000FE3C73 /* UserFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFormViewController.swift; sourceTree = "<group>"; };
+		45CDAF9E27A8609900FE3C73 /* UserFormViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserFormViewController.storyboard; sourceTree = "<group>"; };
+		45CDAFA227A861EF00FE3C73 /* UserFormContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFormContract.swift; sourceTree = "<group>"; };
+		45CDAFA427A8620F00FE3C73 /* UserFormBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFormBuilder.swift; sourceTree = "<group>"; };
+		45CDAFA627A8629E00FE3C73 /* UserFormInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFormInteractor.swift; sourceTree = "<group>"; };
+		45CDAFA827A862D400FE3C73 /* UserFormPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFormPresenter.swift; sourceTree = "<group>"; };
+		45CDAFAA27A8631400FE3C73 /* UserFormProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFormProvider.swift; sourceTree = "<group>"; };
+		45CDAFAC27A887B600FE3C73 /* UserFormModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFormModel.swift; sourceTree = "<group>"; };
+		45CDAFAE27A887F000FE3C73 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		45CE376627A41C72007B6BC8 /* HarryPotterCharacters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HarryPotterCharacters.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45CE376927A41C72007B6BC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45CE376B27A41C72007B6BC8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -227,6 +245,43 @@
 			path = Wireframe;
 			sourceTree = "<group>";
 		};
+		45CDAF9A27A8602A00FE3C73 /* UserForm */ = {
+			isa = PBXGroup;
+			children = (
+				45CDAFA127A861BC00FE3C73 /* Interactor */,
+				45CDAFA027A861AE00FE3C73 /* Presenter */,
+				45CDAF9B27A8603900FE3C73 /* UI */,
+				45CDAFA427A8620F00FE3C73 /* UserFormBuilder.swift */,
+				45CDAFA227A861EF00FE3C73 /* UserFormContract.swift */,
+			);
+			path = UserForm;
+			sourceTree = "<group>";
+		};
+		45CDAF9B27A8603900FE3C73 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				45CDAF9E27A8609900FE3C73 /* UserFormViewController.storyboard */,
+				45CDAF9C27A8607000FE3C73 /* UserFormViewController.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		45CDAFA027A861AE00FE3C73 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				45CDAFA827A862D400FE3C73 /* UserFormPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		45CDAFA127A861BC00FE3C73 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				45CDAFA627A8629E00FE3C73 /* UserFormInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
 		45CE375D27A41C72007B6BC8 = {
 			isa = PBXGroup;
 			children = (
@@ -286,6 +341,7 @@
 			isa = PBXGroup;
 			children = (
 				45CE379A27A41D2B007B6BC8 /* Character.swift */,
+				45CDAFAC27A887B600FE3C73 /* UserFormModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -293,6 +349,7 @@
 		45CE379C27A41E88007B6BC8 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				45CDAF9A27A8602A00FE3C73 /* UserForm */,
 				453A6D1B27A6EB8D0000AE1B /* HousesCollection */,
 				453A6D0627A6B6400000AE1B /* Collection */,
 				45CE37B727A47144007B6BC8 /* Detail */,
@@ -329,6 +386,7 @@
 			isa = PBXGroup;
 			children = (
 				45CE37A627A423CF007B6BC8 /* CharactersProvider.swift */,
+				45CDAFAA27A8631400FE3C73 /* UserFormProvider.swift */,
 			);
 			path = Providers;
 			sourceTree = "<group>";
@@ -353,6 +411,7 @@
 			isa = PBXGroup;
 			children = (
 				45CE37B527A439A4007B6BC8 /* UIViewControllerExtensions.swift */,
+				45CDAFAE27A887F000FE3C73 /* StringExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -509,6 +568,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45CDAF9F27A8609900FE3C73 /* UserFormViewController.storyboard in Resources */,
 				453A6D0A27A6B6B40000AE1B /* CollectionViewController.storyboard in Resources */,
 				45CE37C027A4731F007B6BC8 /* DetailViewController.storyboard in Resources */,
 				453A6D2727A6ED550000AE1B /* HousesCollectionViewController.storyboard in Resources */,
@@ -648,6 +708,7 @@
 				45CE376A27A41C72007B6BC8 /* AppDelegate.swift in Sources */,
 				453A6D3327A713600000AE1B /* HouseCollectionWireframe.swift in Sources */,
 				453A6D2527A6ED4A0000AE1B /* HousesCollectionViewController.swift in Sources */,
+				45CDAFA527A8620F00FE3C73 /* UserFormBuilder.swift in Sources */,
 				453A6D0E27A6B8AC0000AE1B /* CollectionViewCell.swift in Sources */,
 				45CE37AF27A4298D007B6BC8 /* ListTableViewCell.swift in Sources */,
 				45CE376C27A41C72007B6BC8 /* SceneDelegate.swift in Sources */,
@@ -658,15 +719,22 @@
 				453A6D2B27A6F37A0000AE1B /* HousesCollectionControllerBuilder.swift in Sources */,
 				45CE379B27A41D2B007B6BC8 /* Character.swift in Sources */,
 				453A6D2D27A7073B0000AE1B /* HousesCollectionPresenter.swift in Sources */,
+				45CDAFAF27A887F000FE3C73 /* StringExtensions.swift in Sources */,
 				45CE37A427A42050007B6BC8 /* ListViewController.swift in Sources */,
+				45CDAFAD27A887B600FE3C73 /* UserFormModel.swift in Sources */,
 				453A6D1727A6E80D0000AE1B /* DetailPresenter.swift in Sources */,
+				45CDAFA327A861EF00FE3C73 /* UserFormContract.swift in Sources */,
 				45CE37AD27A42804007B6BC8 /* CharactersListPresenter.swift in Sources */,
 				453A6D0527A54E730000AE1B /* CharactersListWireframe.swift in Sources */,
 				45CE37B327A43843007B6BC8 /* InitialControllerBuilder.swift in Sources */,
 				453A6D0227A54D580000AE1B /* DetailControllerBuilder.swift in Sources */,
+				45CDAFA727A8629E00FE3C73 /* UserFormInteractor.swift in Sources */,
 				45CE37A727A423CF007B6BC8 /* CharactersProvider.swift in Sources */,
 				453A6D2F27A707740000AE1B /* HousesViewContract.swift in Sources */,
 				453A6D0C27A6B8680000AE1B /* CollectionControllerBuilder.swift in Sources */,
+				45CDAF9D27A8607000FE3C73 /* UserFormViewController.swift in Sources */,
+				45CDAFA927A862D400FE3C73 /* UserFormPresenter.swift in Sources */,
+				45CDAFAB27A8631400FE3C73 /* UserFormProvider.swift in Sources */,
 				45CE379F27A41F8A007B6BC8 /* ListViewContract.swift in Sources */,
 				45CE37AA27A42724007B6BC8 /* CharactersListInteractor.swift in Sources */,
 			);
