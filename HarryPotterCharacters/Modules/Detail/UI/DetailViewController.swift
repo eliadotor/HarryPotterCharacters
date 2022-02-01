@@ -34,25 +34,27 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var patronusLabel: UILabel!
     @IBOutlet weak var patronus: UILabel!
     
-    var viewModel: DetailViewModel?
+    var presenter: DetailPresenterContract?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configure(width: viewModel)
+        presenter?.view = self
     }
-    
-    func configure(width viewModel: DetailViewModel?) {
-        guard let viewModel = viewModel else { return }
-        detailImage.kf.setImage(with: viewModel.imageUrl)
-        nameCharacter.text = "\(viewModel.name) - "
-        labelHouse.text = viewModel.house
-        nameLabelActor.text = "Actor: "
-        nameActor.text = viewModel.actor
-        patronusLabel.text = "Patronus: "
-        patronus.text = viewModel.patronus
-        dateLabel.text = "Fecha de nacimiento: "
-        date.text = viewModel.dateOfBirth
-        
-    }
+}
 
+
+extension DetailViewController: DetailViewContract {
+    func configure(with viewModel: DetailViewModel) {
+        DispatchQueue.main.async { [self] in
+            self.detailImage.kf.setImage(with: viewModel.imageUrl, placeholder: UIImage(named: viewModel.house))
+            nameCharacter.text = "\(viewModel.name) - "
+            labelHouse.text = viewModel.house
+            nameLabelActor.text = "Actor: "
+            nameActor.text = viewModel.actor
+            patronusLabel.text = "Patronus: "
+            patronus.text = viewModel.patronus
+            dateLabel.text = "Fecha de nacimiento: "
+            date.text = viewModel.dateOfBirth
+        }
+    }
 }

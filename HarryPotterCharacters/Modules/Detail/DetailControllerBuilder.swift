@@ -8,11 +8,14 @@
 import Foundation
 import UIKit
 
+
 class DetailControllerBuilder {
     
     func build(viewModel: DetailViewModel) -> UIViewController {
         let viewController = DetailViewController.createFromStoryBoard()
-        viewController.viewModel = viewModel
+        let interactor = DetailInteractor(viewModel: viewModel)
+        viewController.presenter = DetailPresenter(interactor: interactor)
         return viewController
     }
+    
 }
