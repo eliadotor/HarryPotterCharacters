@@ -35,7 +35,6 @@ protocol ListInteractorContract {
 protocol ListInteractorOutputContract: AnyObject {
     func didFetch(characters: [Character])
     func fetchDidFail()
-
 }
 
 protocol CharacterProviderContract {
