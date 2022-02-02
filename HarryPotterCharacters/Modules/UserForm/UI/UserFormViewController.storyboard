@@ -167,32 +167,24 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="354" height="31"/>
                                                                 <subviews>
                                                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" title="Location permission" translatesAutoresizingMaskIntoConstraints="NO" id="k3g-cH-bGx">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="2" height="31"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
                                                                         <color key="onTintColor" red="0.07526252036265435" green="0.43011427417243875" blue="0.18722595025116504" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <connections>
                                                                             <action selector="locationPermission:" destination="Y6W-OH-hqX" eventType="valueChanged" id="feH-EX-ab2"/>
                                                                         </connections>
                                                                     </switch>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kqh-Gq-U8Z">
-                                                                        <rect key="frame" x="20" y="0.0" width="247" height="31"/>
+                                                                        <rect key="frame" x="69" y="0.0" width="285" height="31"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="skL-2a-pog">
-                                                                        <rect key="frame" x="287" y="0.0" width="67" height="31"/>
-                                                                        <state key="normal" title="Button"/>
-                                                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                                                        <connections>
-                                                                            <action selector="sendPermissionsButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="8bP-dL-3ME"/>
-                                                                        </connections>
-                                                                    </button>
                                                                 </subviews>
                                                             </stackView>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CPa-2Y-TF6">
                                                                 <rect key="frame" x="0.0" y="51" width="354" height="146"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Los datos muggles solo se usarán en caso de que no se acepte el permiso de ubicación" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Feq-sU-SFt">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Feq-sU-SFt">
                                                                         <rect key="frame" x="0.0" y="0.0" width="354" height="146"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <nil key="textColor"/>
@@ -276,11 +268,11 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="infoLabel" destination="Feq-sU-SFt" id="o0z-9s-fFh"/>
                         <outlet property="mailInput" destination="WPJ-p0-Xtw" id="Owf-UV-NmN"/>
                         <outlet property="nameInput" destination="rVm-u1-5Yn" id="aoX-3c-kol"/>
                         <outlet property="nameLabel" destination="br5-ZS-Qt8" id="FSQ-gW-MFE"/>
                         <outlet property="permissionLabel" destination="kqh-Gq-U8Z" id="DuL-u6-emJ"/>
-                        <outlet property="permissionsButton" destination="skL-2a-pog" id="5XG-HU-Oz6"/>
                         <outlet property="phoneInput" destination="OrS-Xl-sYv" id="OMq-5x-CgW"/>
                         <outlet property="scrollView" destination="gVv-Iu-73i" id="7UV-3N-YRU"/>
                         <outlet property="switchButton" destination="k3g-cH-bGx" id="Vpb-Ek-00V"/>

@@ -14,23 +14,16 @@ struct UserFormViewModel {
     let data: String?
 }
 
-class UserFormViewController: UIViewController, UserFormContract {
+class UserFormViewController: UIViewController {
     
     @IBOutlet weak var nameInput: UITextField!
-
     @IBOutlet weak var phoneInput: UITextField!
-
     @IBOutlet weak var mailInput: UITextField!
-    
-
     @IBOutlet weak var nameLabel: UILabel!
-    
     @IBOutlet weak var userDataTextArea: UITextView!
-    
     @IBOutlet weak var switchButton: UISwitch!
-    
-    @IBOutlet weak var permissionsButton: UIButton!
     @IBOutlet weak var permissionLabel: UILabel!
+    @IBOutlet weak var infoLabel: UILabel!
     
     var presenter: UserFormPresenterContract?
     
@@ -45,17 +38,13 @@ class UserFormViewController: UIViewController, UserFormContract {
     }
     
     @IBOutlet weak var scrollView: UIScrollView!
-    
-    @IBAction func sendPermissionsButton(_ sender: Any) {
-        permissionsPresenter?.didPressPermissionsSwitch()
-    }
+
     @IBAction func locationPermission(_ sender: UISwitch) {
         if ((sender as AnyObject).isOn) {
             permissionsPresenter?.didPressPermissionsSwitch()
         } else {
             permissionLabel.text = "No I Do Not"
         }
-
     }
     
     @IBAction func sendPressed(_ sender: Any) {
@@ -71,7 +60,6 @@ class UserFormViewController: UIViewController, UserFormContract {
         userDataTextArea.delegate = self
         presenter?.didLoad()
         permissionsPresenter?.view = self
-        
     }
     
    
@@ -86,7 +74,6 @@ class UserFormViewController: UIViewController, UserFormContract {
             case phoneInput: presenter?.didUpdatePhone(textField.text)
             case mailInput: presenter?.didUpdateMail(textField.text)
             default: break
-           
         }
     }
     
@@ -99,25 +86,7 @@ class UserFormViewController: UIViewController, UserFormContract {
         }
     }
     
-    func didValidateName(_ valid: Bool) {
-        didUpdateValidation(input: nameInput, valid: valid)
-    }
     
-    func didValidatePhone(_ valid: Bool) {
-        didUpdateValidation(input: phoneInput, valid: valid)
-    }
-    
-    func didValidateMail(_ valid: Bool) {
-        didUpdateValidation(input: mailInput, valid: valid)
-    }
-    
-    func showValidationError() {
-        DispatchQueue.main.async {
-            let alert = UIAlertController(title: "Error de validación", message: "Por favor revisa los campos", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Aceptar", style: .default))
-            self.present(alert, animated: true)
-        }
-    }
     
     private func didUpdateValidation(input: UITextField, valid: Bool) {
         DispatchQueue.main.async {
@@ -139,21 +108,44 @@ class UserFormViewController: UIViewController, UserFormContract {
         @objc func keyboardWillHide(notification: NSNotification){
             scrollView.contentInset.bottom = 0
         }
+}
 
+extension UserFormViewController: UserFormContract {
+    func didValidateName(_ valid: Bool) {
+        didUpdateValidation(input: nameInput, valid: valid)
+    }
+    
+    func didValidatePhone(_ valid: Bool) {
+        didUpdateValidation(input: phoneInput, valid: valid)
+    }
+    
+    func didValidateMail(_ valid: Bool) {
+        didUpdateValidation(input: mailInput, valid: valid)
+    }
+    
+    func showValidationError() {
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: "Error de validación", message: "Por favor revisa los campos", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Aceptar", style: .default))
+            self.present(alert, animated: true)
+        }
+    }
     
     func setAllowed() {
         DispatchQueue.main.async {
-            self.permissionsButton.isEnabled = false
+            self.switchButton.isEnabled = false
             self.permissionLabel.text = "Localización permitida"
             self.switchButton.isOn = true
+            self.infoLabel.isHidden = true
         }
     }
     
     func setNotAllowed() {
         DispatchQueue.main.async {
-            self.permissionLabel.isEnabled = true
-            self.permissionLabel.text = "La localización no está permitida"
+            self.switchButton.isEnabled = true
+            self.permissionLabel.text = "¿Permitir acceder a su ubicación?"
             self.switchButton.isOn = false
+            self.infoLabel.text = "Los datos muggles solo se usarán en caso de que no se acepte el permiso de ubicación"
         }
     }
     
@@ -186,4 +178,3 @@ extension UserFormViewController: UITextFieldDelegate {
         return true
     }
 }
-
