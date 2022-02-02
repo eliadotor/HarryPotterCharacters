@@ -16,17 +16,16 @@ enum CharacterProviderError: Error {
 class NetworkCharactersProvider: CharacterProviderContract {
     private let session: Session
     private let house: String
+    private let bundle: Bundle
     
-    init(session: Session = .default, house: String = "") {
+    init(session: Session = .default, bundle: Bundle = .main, house: String = "") {
         self.session = session
+        self.bundle = bundle
         self.house = house
     }
     
     func getCharacters(_ completion: @escaping (Result<[Character], CharacterProviderError>) -> ()) {
-        guard let url = URL(string: "http://hp-api.herokuapp.com/api/characters/\(house)") else {
-            completion(.failure(.badUrl))
-            return
-        }
+        let url = bundle.baseAPIUrl.appendingPathComponent("api/characters/\(house)")
         
         let request = URLRequest(url: url)
         session.request(request).responseDecodable { (response: DataResponse<[Character], AFError>) in

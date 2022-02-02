@@ -13,6 +13,7 @@
 		451F832727AAAD9A0014E855 /* PermissionsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451F832627AAAD9A0014E855 /* PermissionsPresenter.swift */; };
 		451F832A27AAADC90014E855 /* PermissionsContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451F832927AAADC90014E855 /* PermissionsContract.swift */; };
 		451F832C27AAADDB0014E855 /* PermissionsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451F832B27AAADDB0014E855 /* PermissionsBuilder.swift */; };
+		451F832E27AB29580014E855 /* BundleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451F832D27AB29580014E855 /* BundleExtensions.swift */; };
 		453A6D0227A54D580000AE1B /* DetailControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453A6D0127A54D580000AE1B /* DetailControllerBuilder.swift */; };
 		453A6D0527A54E730000AE1B /* CharactersListWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453A6D0427A54E730000AE1B /* CharactersListWireframe.swift */; };
 		453A6D0827A6B6A40000AE1B /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453A6D0727A6B6A40000AE1B /* CollectionViewController.swift */; };
@@ -87,6 +88,7 @@
 		451F832627AAAD9A0014E855 /* PermissionsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionsPresenter.swift; sourceTree = "<group>"; };
 		451F832927AAADC90014E855 /* PermissionsContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionsContract.swift; sourceTree = "<group>"; };
 		451F832B27AAADDB0014E855 /* PermissionsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionsBuilder.swift; sourceTree = "<group>"; };
+		451F832D27AB29580014E855 /* BundleExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleExtensions.swift; sourceTree = "<group>"; };
 		453A6D0127A54D580000AE1B /* DetailControllerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailControllerBuilder.swift; sourceTree = "<group>"; };
 		453A6D0427A54E730000AE1B /* CharactersListWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListWireframe.swift; sourceTree = "<group>"; };
 		453A6D0727A6B6A40000AE1B /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
@@ -442,6 +444,7 @@
 			children = (
 				45CE37B527A439A4007B6BC8 /* UIViewControllerExtensions.swift */,
 				45CDAFAE27A887F000FE3C73 /* StringExtensions.swift */,
+				451F832D27AB29580014E855 /* BundleExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -769,6 +772,7 @@
 				453A6D2F27A707740000AE1B /* HousesViewContract.swift in Sources */,
 				453A6D0C27A6B8680000AE1B /* CollectionControllerBuilder.swift in Sources */,
 				45CDAF9D27A8607000FE3C73 /* UserFormViewController.swift in Sources */,
+				451F832E27AB29580014E855 /* BundleExtensions.swift in Sources */,
 				45CDAFA927A862D400FE3C73 /* UserFormPresenter.swift in Sources */,
 				45CDAFAB27A8631400FE3C73 /* UserFormProvider.swift in Sources */,
 				45CE379F27A41F8A007B6BC8 /* ListViewContract.swift in Sources */,
@@ -940,6 +944,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DECF03FA194CD3318E55926E /* Pods-HarryPotterCharacters.debug.xcconfig */;
 			buildSettings = {
+				API_BASE_URL = "http://hp-api.herokuapp.com/";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -968,6 +973,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7C101858823A64266ADCA2EB /* Pods-HarryPotterCharacters.release.xcconfig */;
 			buildSettings = {
+				API_BASE_URL = "http://hp-api.herokuapp.com/";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
