@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		2713DB89925E9E17BDDF5969 /* Pods_HarryPotterCharactersTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5201EBC356CAEF92A054C8F /* Pods_HarryPotterCharactersTests.framework */; };
 		451F832127A9A65E0014E855 /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451F832027A9A65E0014E855 /* DetailInteractor.swift */; };
+		451F832527AAAD850014E855 /* PermissionsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451F832427AAAD850014E855 /* PermissionsInteractor.swift */; };
+		451F832727AAAD9A0014E855 /* PermissionsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451F832627AAAD9A0014E855 /* PermissionsPresenter.swift */; };
+		451F832A27AAADC90014E855 /* PermissionsContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451F832927AAADC90014E855 /* PermissionsContract.swift */; };
+		451F832C27AAADDB0014E855 /* PermissionsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451F832B27AAADDB0014E855 /* PermissionsBuilder.swift */; };
 		453A6D0227A54D580000AE1B /* DetailControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453A6D0127A54D580000AE1B /* DetailControllerBuilder.swift */; };
 		453A6D0527A54E730000AE1B /* CharactersListWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453A6D0427A54E730000AE1B /* CharactersListWireframe.swift */; };
 		453A6D0827A6B6A40000AE1B /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453A6D0727A6B6A40000AE1B /* CollectionViewController.swift */; };
@@ -79,6 +83,10 @@
 		2FDC4AFDE889DA2D72616F57 /* Pods-HarryPotterCharactersTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HarryPotterCharactersTests.debug.xcconfig"; path = "Target Support Files/Pods-HarryPotterCharactersTests/Pods-HarryPotterCharactersTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4421CE28EF2B6FB61E7A101E /* Pods_HarryPotterCharacters_HarryPotterCharactersUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HarryPotterCharacters_HarryPotterCharactersUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		451F832027A9A65E0014E855 /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
+		451F832427AAAD850014E855 /* PermissionsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionsInteractor.swift; sourceTree = "<group>"; };
+		451F832627AAAD9A0014E855 /* PermissionsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionsPresenter.swift; sourceTree = "<group>"; };
+		451F832927AAADC90014E855 /* PermissionsContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionsContract.swift; sourceTree = "<group>"; };
+		451F832B27AAADDB0014E855 /* PermissionsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionsBuilder.swift; sourceTree = "<group>"; };
 		453A6D0127A54D580000AE1B /* DetailControllerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailControllerBuilder.swift; sourceTree = "<group>"; };
 		453A6D0427A54E730000AE1B /* CharactersListWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListWireframe.swift; sourceTree = "<group>"; };
 		453A6D0727A6B6A40000AE1B /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
@@ -171,6 +179,17 @@
 				451F832027A9A65E0014E855 /* DetailInteractor.swift */,
 			);
 			path = Interactor;
+			sourceTree = "<group>";
+		};
+		451F832327AAAD4E0014E855 /* Permissions */ = {
+			isa = PBXGroup;
+			children = (
+				451F832427AAAD850014E855 /* PermissionsInteractor.swift */,
+				451F832627AAAD9A0014E855 /* PermissionsPresenter.swift */,
+				451F832927AAADC90014E855 /* PermissionsContract.swift */,
+				451F832B27AAADDB0014E855 /* PermissionsBuilder.swift */,
+			);
+			path = Permissions;
 			sourceTree = "<group>";
 		};
 		453A6D0327A54E4D0000AE1B /* Wireframe */ = {
@@ -359,6 +378,7 @@
 		45CE379C27A41E88007B6BC8 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				451F832327AAAD4E0014E855 /* Permissions */,
 				45CDAF9A27A8602A00FE3C73 /* UserForm */,
 				453A6D1B27A6EB8D0000AE1B /* HousesCollection */,
 				453A6D0627A6B6400000AE1B /* Collection */,
@@ -718,6 +738,8 @@
 				45CE37BC27A47199007B6BC8 /* DetailViewController.swift in Sources */,
 				451F832127A9A65E0014E855 /* DetailInteractor.swift in Sources */,
 				45CE376A27A41C72007B6BC8 /* AppDelegate.swift in Sources */,
+				451F832A27AAADC90014E855 /* PermissionsContract.swift in Sources */,
+				451F832727AAAD9A0014E855 /* PermissionsPresenter.swift in Sources */,
 				453A6D3327A713600000AE1B /* HouseCollectionWireframe.swift in Sources */,
 				453A6D2527A6ED4A0000AE1B /* HousesCollectionViewController.swift in Sources */,
 				45CDAFA527A8620F00FE3C73 /* UserFormBuilder.swift in Sources */,
@@ -725,7 +747,9 @@
 				45CE37AF27A4298D007B6BC8 /* ListTableViewCell.swift in Sources */,
 				45CE376C27A41C72007B6BC8 /* SceneDelegate.swift in Sources */,
 				453A6D0827A6B6A40000AE1B /* CollectionViewController.swift in Sources */,
+				451F832C27AAADDB0014E855 /* PermissionsBuilder.swift in Sources */,
 				453A6D3127A70BD90000AE1B /* HousesCollectionInteractor.swift in Sources */,
+				451F832527AAAD850014E855 /* PermissionsInteractor.swift in Sources */,
 				45CE37B127A43822007B6BC8 /* ListControllerBuilder.swift in Sources */,
 				45CE37B627A439A4007B6BC8 /* UIViewControllerExtensions.swift in Sources */,
 				453A6D2B27A6F37A0000AE1B /* HousesCollectionControllerBuilder.swift in Sources */,

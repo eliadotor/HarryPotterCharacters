@@ -10,6 +10,8 @@ import UIKit
 
 protocol UserFormContract: UIViewController {
     var presenter: UserFormPresenterContract? {get set}
+    var permissionsPresenter: PermissionsPresenterContract? {set get}
+    
     
     func configure(with viewModel: UserFormViewModel)
     
@@ -17,6 +19,10 @@ protocol UserFormContract: UIViewController {
     func didValidatePhone(_ valid: Bool)
     func didValidateMail(_ valid: Bool)
     func showValidationError()
+    
+    func setAllowed()
+    func setNotAllowed()
+    func openSettings()
 }
 
 protocol UserFormPresenterContract {

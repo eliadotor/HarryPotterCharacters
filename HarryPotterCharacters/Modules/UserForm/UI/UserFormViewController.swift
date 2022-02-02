@@ -27,7 +27,14 @@ class UserFormViewController: UIViewController, UserFormContract {
     
     @IBOutlet weak var userDataTextArea: UITextView!
     
+    @IBOutlet weak var switchButton: UISwitch!
+    
+    @IBOutlet weak var permissionsButton: UIButton!
+    @IBOutlet weak var permissionLabel: UILabel!
+    
     var presenter: UserFormPresenterContract?
+    
+    var permissionsPresenter: PermissionsPresenterContract?
     
     @IBAction func scrollViewTapped(_ sender: Any) {
         view.endEditing(true)
@@ -39,7 +46,16 @@ class UserFormViewController: UIViewController, UserFormContract {
     
     @IBOutlet weak var scrollView: UIScrollView!
     
+    @IBAction func sendPermissionsButton(_ sender: Any) {
+        permissionsPresenter?.didPressPermissionsSwitch()
+    }
     @IBAction func locationPermission(_ sender: UISwitch) {
+        if ((sender as AnyObject).isOn) {
+            permissionsPresenter?.didPressPermissionsSwitch()
+        } else {
+            permissionLabel.text = "No I Do Not"
+        }
+
     }
     
     @IBAction func sendPressed(_ sender: Any) {
@@ -54,9 +70,9 @@ class UserFormViewController: UIViewController, UserFormContract {
         }
         userDataTextArea.delegate = self
         presenter?.didLoad()
+        permissionsPresenter?.view = self
         
     }
-    
     
    
     @IBAction func inputChanged(_ textField: UITextField) {
@@ -123,9 +139,29 @@ class UserFormViewController: UIViewController, UserFormContract {
         @objc func keyboardWillHide(notification: NSNotification){
             scrollView.contentInset.bottom = 0
         }
-        deinit {
-            print("deinit \(self)")
+
+    
+    func setAllowed() {
+        DispatchQueue.main.async {
+            self.permissionsButton.isEnabled = false
+            self.permissionLabel.text = "Localización permitida"
+            self.switchButton.isOn = true
         }
+    }
+    
+    func setNotAllowed() {
+        DispatchQueue.main.async {
+            self.permissionLabel.isEnabled = true
+            self.permissionLabel.text = "La localización no está permitida"
+            self.switchButton.isOn = false
+        }
+    }
+    
+    func openSettings() {
+        DispatchQueue.main.async {
+            UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!)
+        }
+    }
     
 }
 
@@ -150,3 +186,4 @@ extension UserFormViewController: UITextFieldDelegate {
         return true
     }
 }
+

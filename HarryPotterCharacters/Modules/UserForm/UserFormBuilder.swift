@@ -14,7 +14,10 @@ class UserFormBuilder {
         let viewController = UserFormViewController.createFromStoryBoard()
         let presenter = UserFormPresenter()
         presenter.view = viewController
+        let interactorPermissions = PermissionsInteractor()
+        let peresenterPermissions = PermissionsPresenter(interactor: interactorPermissions)
         viewController.presenter = presenter
+        viewController.permissionsPresenter = peresenterPermissions
         
         let interactor = UserFormInteractor()
         interactor.userProvider = UserDefaultsProvider()

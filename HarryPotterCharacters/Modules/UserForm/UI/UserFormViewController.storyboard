@@ -128,7 +128,7 @@
                                                         </constraints>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="rQh-5X-Ain">
-                                                        <rect key="frame" x="0.0" y="260.5" width="354" height="240.5"/>
+                                                        <rect key="frame" x="0.0" y="260.5" width="354" height="190.5"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rxh-ac-9Vu">
                                                                 <rect key="frame" x="0.0" y="0.0" width="354" height="20.5"/>
@@ -149,10 +149,10 @@
                                                                 </constraints>
                                                             </view>
                                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pGr-OS-qke">
-                                                                <rect key="frame" x="0.0" y="40.5" width="354" height="200"/>
+                                                                <rect key="frame" x="0.0" y="40.5" width="354" height="150"/>
                                                                 <color key="backgroundColor" systemColor="systemGray3Color"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="height" constant="200" id="d2l-Jy-4Nu"/>
+                                                                    <constraint firstAttribute="height" constant="150" id="d2l-Jy-4Nu"/>
                                                                 </constraints>
                                                                 <color key="textColor" systemColor="labelColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -161,31 +161,39 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ZR8-ai-DfQ">
-                                                        <rect key="frame" x="0.0" y="526" width="354" height="147"/>
+                                                        <rect key="frame" x="0.0" y="476" width="354" height="197"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="dbV-vc-3GW">
                                                                 <rect key="frame" x="0.0" y="0.0" width="354" height="31"/>
                                                                 <subviews>
-                                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" title="Location permission" translatesAutoresizingMaskIntoConstraints="NO" id="k3g-cH-bGx">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" title="Location permission" translatesAutoresizingMaskIntoConstraints="NO" id="k3g-cH-bGx">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="2" height="31"/>
                                                                         <color key="onTintColor" red="0.07526252036265435" green="0.43011427417243875" blue="0.18722595025116504" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <connections>
                                                                             <action selector="locationPermission:" destination="Y6W-OH-hqX" eventType="valueChanged" id="feH-EX-ab2"/>
                                                                         </connections>
                                                                     </switch>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location Permission" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kqh-Gq-U8Z">
-                                                                        <rect key="frame" x="69" y="0.0" width="285" height="31"/>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kqh-Gq-U8Z">
+                                                                        <rect key="frame" x="20" y="0.0" width="247" height="31"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="skL-2a-pog">
+                                                                        <rect key="frame" x="287" y="0.0" width="67" height="31"/>
+                                                                        <state key="normal" title="Button"/>
+                                                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                                        <connections>
+                                                                            <action selector="sendPermissionsButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="8bP-dL-3ME"/>
+                                                                        </connections>
+                                                                    </button>
                                                                 </subviews>
                                                             </stackView>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CPa-2Y-TF6">
-                                                                <rect key="frame" x="0.0" y="51" width="354" height="96"/>
+                                                                <rect key="frame" x="0.0" y="51" width="354" height="146"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Los datos muggles solo se usarán en caso de que no se acepte el permiso de ubicación" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Feq-sU-SFt">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="354" height="96"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="354" height="146"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -271,8 +279,11 @@
                         <outlet property="mailInput" destination="WPJ-p0-Xtw" id="Owf-UV-NmN"/>
                         <outlet property="nameInput" destination="rVm-u1-5Yn" id="aoX-3c-kol"/>
                         <outlet property="nameLabel" destination="br5-ZS-Qt8" id="FSQ-gW-MFE"/>
+                        <outlet property="permissionLabel" destination="kqh-Gq-U8Z" id="DuL-u6-emJ"/>
+                        <outlet property="permissionsButton" destination="skL-2a-pog" id="5XG-HU-Oz6"/>
                         <outlet property="phoneInput" destination="OrS-Xl-sYv" id="OMq-5x-CgW"/>
                         <outlet property="scrollView" destination="gVv-Iu-73i" id="7UV-3N-YRU"/>
+                        <outlet property="switchButton" destination="k3g-cH-bGx" id="Vpb-Ek-00V"/>
                         <outlet property="userDataTextArea" destination="pGr-OS-qke" id="DV6-4h-k5Z"/>
                     </connections>
                 </viewController>
