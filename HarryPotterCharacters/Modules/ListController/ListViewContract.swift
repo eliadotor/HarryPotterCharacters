@@ -26,7 +26,7 @@ protocol ListPresenterContract: AnyObject {
 
 }
 
-protocol ListInteractorContract {
+protocol ListInteractorContract: AnyObject {
     var charactersProvider: CharacterProviderContract? {get set}
     var output: ListInteractorOutputContract? {get set}
     func fetchItems()

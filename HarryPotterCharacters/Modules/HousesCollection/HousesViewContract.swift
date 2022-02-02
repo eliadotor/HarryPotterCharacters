@@ -22,7 +22,7 @@ protocol HousesCollectionPresenterContract: AnyObject {
     func didSelectItem(at indexPath: IndexPath)
 }
 
-protocol HousesCollectionInteractorContract {
+protocol HousesCollectionInteractorContract: AnyObject {
     var output: HousesCollectionInteractorOutputContract? {get set}
     func fetchHouses()
 }

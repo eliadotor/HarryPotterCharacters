@@ -13,16 +13,10 @@ class UserFormPresenter: UserFormPresenterContract {
     
     func didLoad() {
         interactor?.output = self
-        print(userFormModel)
-        print("user")
         fetchUser()
-        
     }
-    private var userFormModel = UserFormModel() {
-        didSet {
-            print(userFormModel)
-        }
-    }
+    
+    private var userFormModel = UserFormModel()
     
     func didUpdateName(_ name: String?) {
         userFormModel.name = name
@@ -46,34 +40,26 @@ class UserFormPresenter: UserFormPresenterContract {
     func didPressSend() {
         guard userFormModel.isValid else {
             view?.showValidationError()
-            print("retry")
-
             return
         }
-        print("success")
         interactor?.saveUser(userFormModel)
     }
     
     func fetchUser() {
-        print(userFormModel)
         interactor?.fetchUser()
     }
     
-    deinit {
-        print("deinit \(self)")
-    }
 }
 
 
 extension UserFormPresenter: UserFormInteractorOutputContract {
     func didFetchUser(_ user: UserFormModel) {
-        print(user)
         self.userFormModel = user
         view?.configure(with: user.toFormViewModel)
     }
     
     func fetchDidFail() {
-        print("Error")
+        fatalError()
     }
     
 }

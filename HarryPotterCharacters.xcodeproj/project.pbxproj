@@ -464,8 +464,8 @@
 		45CE37BA27A4717A007B6BC8 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				45CE37BB27A47199007B6BC8 /* DetailViewController.swift */,
 				45CE37BF27A4731F007B6BC8 /* DetailViewController.storyboard */,
+				45CE37BB27A47199007B6BC8 /* DetailViewController.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";

@@ -28,7 +28,6 @@ class PermissionsPresenter {
         }
     }
     
-    
 }
 
 extension PermissionsPresenter: PermissionsPresenterContract {

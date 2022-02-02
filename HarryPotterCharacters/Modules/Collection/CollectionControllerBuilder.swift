@@ -15,9 +15,8 @@ class CollectionControllerBuilder {
         viewController.navigationItem.title = "Characters"
         let presenter = CharactersListPresenter()
         let interactor = CharactersListInteractor()
-        interactor.charactersProvider = NetworkCharactersProvider(session: .default, house: "")
-        
         let wireframe = CharactersListWireframe()
+        interactor.charactersProvider = NetworkCharactersProvider(session: .default, house: "")
         viewController.presenter = presenter
         presenter.viewCollection = viewController
         presenter.interactor = interactor
@@ -25,5 +24,11 @@ class CollectionControllerBuilder {
         wireframe.view = viewController
         return viewController
     }
-        
+    
+    func builderForTabBar(tag: Int) -> UIViewController {
+        let viewController = build()
+        viewController.tabBarItem = .init(title: "Collection", image: UIImage.init(systemName: "rectangle.stack.person.crop.fill"), tag: tag)
+        return viewController
+    }
+    
 }

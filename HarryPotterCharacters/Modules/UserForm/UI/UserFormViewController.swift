@@ -40,11 +40,7 @@ class UserFormViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
 
     @IBAction func locationPermission(_ sender: UISwitch) {
-        if ((sender as AnyObject).isOn) {
-            permissionsPresenter?.didPressPermissionsSwitch()
-        } else {
-            permissionLabel.text = "No I Do Not"
-        }
+        permissionsPresenter?.didPressPermissionsSwitch()
     }
     
     @IBAction func sendPressed(_ sender: Any) {

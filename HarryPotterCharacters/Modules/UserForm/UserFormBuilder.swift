@@ -13,16 +13,20 @@ class UserFormBuilder {
     func build() -> UIViewController {
         let viewController = UserFormViewController.createFromStoryBoard()
         let presenter = UserFormPresenter()
-        presenter.view = viewController
+        let interactor = UserFormInteractor()
         let interactorPermissions = PermissionsInteractor()
         let peresenterPermissions = PermissionsPresenter(interactor: interactorPermissions)
+        presenter.view = viewController
         viewController.presenter = presenter
         viewController.permissionsPresenter = peresenterPermissions
-        
-        let interactor = UserFormInteractor()
         interactor.userProvider = UserDefaultsProvider()
-        
         presenter.interactor = interactor
+        return viewController
+    }
+    
+    func builderForTabBar(tag: Int) -> UIViewController {
+        let viewController = build()
+        viewController.tabBarItem = .init(title: "Form", image: UIImage.init(systemName: "pencil.and.outline"), tag: tag)
         return viewController
     }
 }
