@@ -48,7 +48,7 @@ extension HousesCollectionPresenter: HousesCollectionInteractorOutputContract {
     }
     
     func fetchDidFail() {
-        fatalError()
+        print("Error")
     }
 
 }

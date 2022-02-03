@@ -59,6 +59,7 @@ extension CharactersListPresenter: ListInteractorOutputContract {
     }
     
     func fetchDidFail() {
-        fatalError()    }
+        print("Error")
+    }
 
 }

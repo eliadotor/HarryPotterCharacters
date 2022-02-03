@@ -30,6 +30,10 @@
 		453A6D2F27A707740000AE1B /* HousesViewContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453A6D2E27A707740000AE1B /* HousesViewContract.swift */; };
 		453A6D3127A70BD90000AE1B /* HousesCollectionInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453A6D3027A70BD90000AE1B /* HousesCollectionInteractor.swift */; };
 		453A6D3327A713600000AE1B /* HouseCollectionWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453A6D3227A713600000AE1B /* HouseCollectionWireframe.swift */; };
+		459233BE27ABD9A4004CAD89 /* CharactersListInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459233BD27ABD9A4004CAD89 /* CharactersListInteractorTests.swift */; };
+		459233C827AC3682004CAD89 /* HarryPotterCharactersIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459233C727AC3682004CAD89 /* HarryPotterCharactersIntegrationTests.swift */; };
+		459233CF27AC36EA004CAD89 /* CharactersProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459233CE27AC36EA004CAD89 /* CharactersProviderTests.swift */; };
+		459233D127AC3924004CAD89 /* UserFormInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459233D027AC3924004CAD89 /* UserFormInteractorTests.swift */; };
 		45CDAF9D27A8607000FE3C73 /* UserFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CDAF9C27A8607000FE3C73 /* UserFormViewController.swift */; };
 		45CDAF9F27A8609900FE3C73 /* UserFormViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45CDAF9E27A8609900FE3C73 /* UserFormViewController.storyboard */; };
 		45CDAFA327A861EF00FE3C73 /* UserFormContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CDAFA227A861EF00FE3C73 /* UserFormContract.swift */; };
@@ -64,6 +68,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		459233C927AC3682004CAD89 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 45CE375E27A41C72007B6BC8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 45CE376527A41C72007B6BC8;
+			remoteInfo = HarryPotterCharacters;
+		};
 		45CE377D27A41C77007B6BC8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 45CE375E27A41C72007B6BC8 /* Project object */;
@@ -105,6 +116,11 @@
 		453A6D2E27A707740000AE1B /* HousesViewContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousesViewContract.swift; sourceTree = "<group>"; };
 		453A6D3027A70BD90000AE1B /* HousesCollectionInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousesCollectionInteractor.swift; sourceTree = "<group>"; };
 		453A6D3227A713600000AE1B /* HouseCollectionWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseCollectionWireframe.swift; sourceTree = "<group>"; };
+		459233BD27ABD9A4004CAD89 /* CharactersListInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListInteractorTests.swift; sourceTree = "<group>"; };
+		459233C527AC3682004CAD89 /* HarryPotterCharactersIntegrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HarryPotterCharactersIntegrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		459233C727AC3682004CAD89 /* HarryPotterCharactersIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarryPotterCharactersIntegrationTests.swift; sourceTree = "<group>"; };
+		459233CE27AC36EA004CAD89 /* CharactersProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersProviderTests.swift; sourceTree = "<group>"; };
+		459233D027AC3924004CAD89 /* UserFormInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFormInteractorTests.swift; sourceTree = "<group>"; };
 		45CDAF9C27A8607000FE3C73 /* UserFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFormViewController.swift; sourceTree = "<group>"; };
 		45CDAF9E27A8609900FE3C73 /* UserFormViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserFormViewController.storyboard; sourceTree = "<group>"; };
 		45CDAFA227A861EF00FE3C73 /* UserFormContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFormContract.swift; sourceTree = "<group>"; };
@@ -148,6 +164,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		459233C227AC3682004CAD89 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		45CE376327A41C72007B6BC8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -276,6 +299,15 @@
 			path = Wireframe;
 			sourceTree = "<group>";
 		};
+		459233C627AC3682004CAD89 /* HarryPotterCharactersIntegrationTests */ = {
+			isa = PBXGroup;
+			children = (
+				459233C727AC3682004CAD89 /* HarryPotterCharactersIntegrationTests.swift */,
+				459233CE27AC36EA004CAD89 /* CharactersProviderTests.swift */,
+			);
+			path = HarryPotterCharactersIntegrationTests;
+			sourceTree = "<group>";
+		};
 		45CDAF9A27A8602A00FE3C73 /* UserForm */ = {
 			isa = PBXGroup;
 			children = (
@@ -319,6 +351,7 @@
 				45CE376827A41C72007B6BC8 /* HarryPotterCharacters */,
 				45CE377F27A41C77007B6BC8 /* HarryPotterCharactersTests */,
 				45CE378927A41C77007B6BC8 /* HarryPotterCharactersUITests */,
+				459233C627AC3682004CAD89 /* HarryPotterCharactersIntegrationTests */,
 				45CE376727A41C72007B6BC8 /* Products */,
 				D4B7558E20770E595ED15F2D /* Pods */,
 				52B8273C90D52B1315110375 /* Frameworks */,
@@ -331,6 +364,7 @@
 				45CE376627A41C72007B6BC8 /* HarryPotterCharacters.app */,
 				45CE377C27A41C77007B6BC8 /* HarryPotterCharactersTests.xctest */,
 				45CE378627A41C77007B6BC8 /* HarryPotterCharactersUITests.xctest */,
+				459233C527AC3682004CAD89 /* HarryPotterCharactersIntegrationTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -355,6 +389,8 @@
 			isa = PBXGroup;
 			children = (
 				45CE378027A41C77007B6BC8 /* HarryPotterCharactersTests.swift */,
+				459233BD27ABD9A4004CAD89 /* CharactersListInteractorTests.swift */,
+				459233D027AC3924004CAD89 /* UserFormInteractorTests.swift */,
 			);
 			path = HarryPotterCharactersTests;
 			sourceTree = "<group>";
@@ -496,6 +532,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		459233C427AC3682004CAD89 /* HarryPotterCharactersIntegrationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 459233CB27AC3682004CAD89 /* Build configuration list for PBXNativeTarget "HarryPotterCharactersIntegrationTests" */;
+			buildPhases = (
+				459233C127AC3682004CAD89 /* Sources */,
+				459233C227AC3682004CAD89 /* Frameworks */,
+				459233C327AC3682004CAD89 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				459233CA27AC3682004CAD89 /* PBXTargetDependency */,
+			);
+			name = HarryPotterCharactersIntegrationTests;
+			productName = HarryPotterCharactersIntegrationTests;
+			productReference = 459233C527AC3682004CAD89 /* HarryPotterCharactersIntegrationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		45CE376527A41C72007B6BC8 /* HarryPotterCharacters */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 45CE379027A41C77007B6BC8 /* Build configuration list for PBXNativeTarget "HarryPotterCharacters" */;
@@ -564,6 +618,10 @@
 				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
+					459233C427AC3682004CAD89 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 45CE376527A41C72007B6BC8;
+					};
 					45CE376527A41C72007B6BC8 = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
@@ -593,11 +651,19 @@
 				45CE376527A41C72007B6BC8 /* HarryPotterCharacters */,
 				45CE377B27A41C77007B6BC8 /* HarryPotterCharactersTests */,
 				45CE378527A41C77007B6BC8 /* HarryPotterCharactersUITests */,
+				459233C427AC3682004CAD89 /* HarryPotterCharactersIntegrationTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		459233C327AC3682004CAD89 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		45CE376427A41C72007B6BC8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -732,6 +798,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		459233C127AC3682004CAD89 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				459233CF27AC36EA004CAD89 /* CharactersProviderTests.swift in Sources */,
+				459233C827AC3682004CAD89 /* HarryPotterCharactersIntegrationTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		45CE376227A41C72007B6BC8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -784,7 +859,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				459233BE27ABD9A4004CAD89 /* CharactersListInteractorTests.swift in Sources */,
 				45CE378127A41C77007B6BC8 /* HarryPotterCharactersTests.swift in Sources */,
+				459233D127AC3924004CAD89 /* UserFormInteractorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -800,6 +877,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		459233CA27AC3682004CAD89 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 45CE376527A41C72007B6BC8 /* HarryPotterCharacters */;
+			targetProxy = 459233C927AC3682004CAD89 /* PBXContainerItemProxy */;
+		};
 		45CE377E27A41C77007B6BC8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 45CE376527A41C72007B6BC8 /* HarryPotterCharacters */;
@@ -824,6 +906,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		459233CC27AC3682004CAD89 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YW82H8FU3C;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.eliadotor.HarryPotterCharactersIntegrationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HarryPotterCharacters.app/HarryPotterCharacters";
+			};
+			name = Debug;
+		};
+		459233CD27AC3682004CAD89 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YW82H8FU3C;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.eliadotor.HarryPotterCharactersIntegrationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HarryPotterCharacters.app/HarryPotterCharacters";
+			};
+			name = Release;
+		};
 		45CE378E27A41C77007B6BC8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1081,6 +1199,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		459233CB27AC3682004CAD89 /* Build configuration list for PBXNativeTarget "HarryPotterCharactersIntegrationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				459233CC27AC3682004CAD89 /* Debug */,
+				459233CD27AC3682004CAD89 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		45CE376127A41C72007B6BC8 /* Build configuration list for PBXProject "HarryPotterCharacters" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

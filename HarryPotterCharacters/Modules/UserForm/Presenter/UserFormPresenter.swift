@@ -59,7 +59,7 @@ extension UserFormPresenter: UserFormInteractorOutputContract {
     }
     
     func fetchDidFail() {
-        fatalError()
+        print("Error")
     }
     
 }
