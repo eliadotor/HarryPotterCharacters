@@ -55,6 +55,7 @@ class UserFormViewController: UIViewController {
         }
         userDataTextArea.delegate = self
         presenter?.didLoad()
+        presenter?.view = self
         permissionsPresenter?.view = self
     }
     

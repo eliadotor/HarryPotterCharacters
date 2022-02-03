@@ -10,8 +10,13 @@ import Foundation
 
 class HousesCollectionPresenter: HousesCollectionPresenterContract {
     weak var view: HousesCollectionViewController?
-    var interactor: HousesCollectionInteractorContract?
-    var wireframe: HousesCollectionWireframeContract?
+    private let interactor: HousesCollectionInteractorContract?
+    private let wireframe: HousesCollectionWireframeContract?
+    
+    init(interactor: HousesCollectionInteractorContract?, wireframe: HousesCollectionWireframeContract?) {
+        self.interactor = interactor
+        self.wireframe = wireframe
+    }
     
     private var houses = [String]()
     

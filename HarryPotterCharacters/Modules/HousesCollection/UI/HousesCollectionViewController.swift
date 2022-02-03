@@ -19,6 +19,7 @@ class HousesCollectionViewController: UIViewController {
         super.viewDidLoad()
         housesCollectionView.dataSource = self
         housesCollectionView.delegate = self
+        presenter?.view = self
         presenter?.viewDidLoad()
 
     }
@@ -50,7 +51,7 @@ extension HousesCollectionViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let house = presenter?.fetchSelectItem(at: indexPath), let cell =
                     collectionView.dequeueReusableCell(withReuseIdentifier: "HousesCollectionViewCell", for: indexPath) as? HousesCollectionViewCell else {
-                fatalError()
+                        fatalError()
             }
         cell.configure(with: house)
         return cell

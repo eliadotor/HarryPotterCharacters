@@ -9,26 +9,38 @@ import Foundation
 import UIKit
 
 class CollectionControllerBuilder {
-    
     func build()-> UIViewController {
         let viewController = CollectionViewController.createFromStoryBoard()
         viewController.navigationItem.title = "Characters"
-        let presenter = CharactersListPresenter()
-        let interactor = CharactersListInteractor()
         let wireframe = CharactersListWireframe()
-        interactor.charactersProvider = NetworkCharactersProvider(session: .default, house: "")
-        viewController.presenter = presenter
-        presenter.viewCollection = viewController
-        presenter.interactor = interactor
-        presenter.wireframe = wireframe
+        viewController.presenter = buildPresenter(wireframe: wireframe)
         wireframe.view = viewController
         return viewController
     }
-    
+ 
     func builderForTabBar(tag: Int) -> UIViewController {
         let viewController = build()
         viewController.tabBarItem = .init(title: "Collection", image: UIImage.init(systemName: "rectangle.stack.person.crop.fill"), tag: tag)
         return viewController
     }
     
+}
+
+private extension CollectionControllerBuilder {
+    func buildProvider() -> CharacterProviderContract {
+        NetworkCharactersProvider(session: .default, house: "")
+    }
+    
+    func buildInteractor() -> ListInteractorContract {
+        CharactersListInteractor(provider: buildProvider())
+    }
+    
+    func buildInteractorHouses() -> HousesCollectionInteractorContract {
+        HousesCollectionInteractor()
+    }
+    
+    func buildPresenter(wireframe: CharactersListWireframe) -> ListPresenterContract {
+        CharactersListPresenter(interactor: buildInteractor(), wireframe: wireframe)
+    }
+
 }

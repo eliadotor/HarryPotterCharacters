@@ -12,8 +12,13 @@ class CharactersListPresenter: ListPresenterContract {
     
     weak var viewList: ListViewController?
     weak var viewCollection: CollectionViewController?
-    var interactor: ListInteractorContract?
-    var wireframe: CharactersListWireframeContract?
+    private let interactor: ListInteractorContract?
+    private var wireframe: CharactersListWireframeContract?
+    
+    init(interactor: ListInteractorContract?, wireframe: CharactersListWireframeContract?) {
+        self.interactor = interactor
+        self.wireframe = wireframe
+    }
 
     private var characters = [Character]() {
         didSet {

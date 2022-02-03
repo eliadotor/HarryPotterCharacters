@@ -15,7 +15,6 @@ protocol HouseCollectionviewContract: UIViewController {
 
 protocol HousesCollectionPresenterContract: AnyObject {
     var view: HousesCollectionViewController? {set get}
-    var interactor: HousesCollectionInteractorContract? {set get}
     var numItems: Int {get}
     func viewDidLoad()
     func fetchSelectItem(at indexPath: IndexPath) -> String

@@ -10,7 +10,10 @@ import Foundation
 
 class CharactersListInteractor: ListInteractorContract {
     
-    var charactersProvider: CharacterProviderContract?
+    let charactersProvider: CharacterProviderContract?
+    init(provider: CharacterProviderContract) {
+        self.charactersProvider = provider
+    }
     
     weak var output: ListInteractorOutputContract?
     

@@ -9,7 +9,12 @@ import Foundation
 
 class UserFormPresenter: UserFormPresenterContract {
     weak var view: UserFormContract?
-    var interactor: UserFormInteractorContract?
+
+    private var interactor: UserFormInteractorContract?
+    
+    init(interactor: UserFormInteractorContract?) {
+        self.interactor = interactor
+    }
     
     func didLoad() {
         interactor?.output = self

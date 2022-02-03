@@ -18,6 +18,7 @@ class ListViewController: UIViewController {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
+        presenter?.viewList = self
         presenter?.viewDidLoad()
     }
     
@@ -35,7 +36,7 @@ extension ListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let viewModel = presenter?.cellViewModel(at: indexPath), let cell = tableView.dequeueReusableCell(withIdentifier: "ListTableViewCell", for: indexPath) as? ListTableViewCell else {
-            print("Error")
+            fatalError()
         }
         cell.configure(viewModel: viewModel)
         return cell

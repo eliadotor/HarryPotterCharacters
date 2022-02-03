@@ -13,18 +13,22 @@ class HousesCollectionControllerBuilder {
     func build()-> UIViewController {
         let viewController = HousesCollectionViewController.createFromStoryBoard()
         viewController.navigationItem.title = "Hogwarts houses"
-        
-        
-        let presenter = HousesCollectionPresenter()
-        let interactor = HousesCollectionInteractor()
         let wireframe = HousesCollectionWireframe()
-        
-        viewController.presenter = presenter
-        presenter.view = viewController
-        presenter.interactor = interactor
-        presenter.wireframe = wireframe
+        viewController.presenter = buildPresenter(wireframe: wireframe)
         wireframe.view = viewController
         return viewController        
     }
         
+}
+
+private extension HousesCollectionControllerBuilder {
+    
+    func buildInteractor() -> HousesCollectionInteractorContract {
+        HousesCollectionInteractor()
+    }
+
+    func buildPresenter(wireframe: HousesCollectionWireframe) -> HousesCollectionPresenterContract {
+        HousesCollectionPresenter(interactor: buildInteractor(), wireframe: wireframe)
+    }
+
 }

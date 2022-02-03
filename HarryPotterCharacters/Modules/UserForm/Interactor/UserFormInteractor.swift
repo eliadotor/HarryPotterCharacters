@@ -8,8 +8,14 @@
 import Foundation
 
 class UserFormInteractor: UserFormInteractorContract {
+    
     weak var output: UserFormInteractorOutputContract?
-    var userProvider: UserFormProviderContract?
+    
+    private let userProvider: UserFormProviderContract?
+    
+    init(provider: UserFormProviderContract) {
+        self.userProvider = provider
+    }
     
     func fetchUser() {
         userProvider?.loadUser({ result in

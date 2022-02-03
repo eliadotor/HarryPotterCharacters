@@ -12,15 +12,10 @@ import UIKit
 class UserFormBuilder {
     func build() -> UIViewController {
         let viewController = UserFormViewController.createFromStoryBoard()
-        let presenter = UserFormPresenter()
-        let interactor = UserFormInteractor()
         let interactorPermissions = PermissionsInteractor()
         let peresenterPermissions = PermissionsPresenter(interactor: interactorPermissions)
-        presenter.view = viewController
-        viewController.presenter = presenter
+        viewController.presenter = buildPresenter()
         viewController.permissionsPresenter = peresenterPermissions
-        interactor.userProvider = UserDefaultsProvider()
-        presenter.interactor = interactor
         return viewController
     }
     
@@ -28,5 +23,20 @@ class UserFormBuilder {
         let viewController = build()
         viewController.tabBarItem = .init(title: "Form", image: UIImage.init(systemName: "pencil.and.outline"), tag: tag)
         return viewController
+    }
+}
+
+private extension UserFormBuilder {
+
+    func buildProvider() -> UserFormProviderContract {
+        UserDefaultsProvider()
+    }
+
+    func buildInteractor() -> UserFormInteractorContract {
+        UserFormInteractor(provider: buildProvider())
+    }
+    
+    func buildPresenter() -> UserFormPresenterContract {
+        UserFormPresenter(interactor: buildInteractor())
     }
 }

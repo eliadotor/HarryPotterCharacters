@@ -11,10 +11,17 @@ import UIKit
 class PermissionsBuilder {
     func build() -> UIViewController {
         let viewController = UserFormViewController.createFromStoryBoard()
-        let interactor = PermissionsInteractor()
-        let presenter = PermissionsPresenter(interactor: interactor)
-        viewController.permissionsPresenter = presenter
+        viewController.permissionsPresenter = buildPresenter()
         return viewController
     }
-    
+}
+
+
+private extension PermissionsBuilder {
+    func buildInteractor() -> PermissionsInteractorContract {
+        PermissionsInteractor()
+    }
+    func buildPresenter() -> PermissionsPresenterContract {
+        PermissionsPresenter(interactor: buildInteractor())
+    }
 }

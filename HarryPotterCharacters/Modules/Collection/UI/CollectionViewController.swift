@@ -19,6 +19,7 @@ class CollectionViewController: UIViewController {
         super.viewDidLoad()
         collectionView.dataSource = self
         collectionView.delegate = self
+        presenter?.viewCollection = self
         presenter?.viewDidLoad()
     }
    

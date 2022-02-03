@@ -27,9 +27,8 @@ protocol UserFormContract: UIViewController {
 
 protocol UserFormPresenterContract {
     var view: UserFormContract? {get set}
-    var interactor: UserFormInteractorContract? {get set}
+
     func didLoad()
-    
     func didUpdateName(_ name: String?)
     func didUpdatePhone(_ phone: String?)
     func didUpdateMail(_ mail: String?)
@@ -39,7 +38,6 @@ protocol UserFormPresenterContract {
 
 
 protocol UserFormInteractorContract {
-    var userProvider: UserFormProviderContract? {get set}
     var output: UserFormInteractorOutputContract? {get set}
     func saveUser(_ user: UserFormModel)
     func fetchUser()

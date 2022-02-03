@@ -12,27 +12,25 @@ import Alamofire
 class ListControllerBuilder {
     func build(house: String)-> UIViewController {
         let viewController = ListViewController.createFromStoryBoard()
-        let viewControllerHouse = HousesCollectionViewController.createFromStoryBoard()
         viewController.navigationItem.title = "\(house) House"
-        let presenter = CharactersListPresenter()
-        let presenterHouse = HousesCollectionPresenter()
-        let interactor = CharactersListInteractor()
-        let interactorHouse = HousesCollectionInteractor()
-
-        interactor.charactersProvider = NetworkCharactersProvider(session: .default, house: "house/\(house.lowercased())")
-        
         let wireframe = CharactersListWireframe()
-        let wireframeHouse = HousesCollectionWireframe()
-        viewController.presenter = presenter
-        viewControllerHouse.presenter = presenterHouse
-        presenterHouse.interactor = interactorHouse
-        presenterHouse.view = viewControllerHouse
-        presenterHouse.wireframe = wireframeHouse
-        presenter.viewList = viewController
-        presenter.interactor = interactor
-        presenter.wireframe = wireframe
+        viewController.presenter = buildPresenter(house: house, wireframe: wireframe)
         wireframe.view = viewController
         return viewController
     }
-        
+}
+
+private extension ListControllerBuilder {
+    func buildProvider(house: String) -> CharacterProviderContract {
+        NetworkCharactersProvider(session: .default, house: "house/\(house.lowercased())")
+    }
+
+    func buildInteractor(house: String) -> ListInteractorContract {
+        CharactersListInteractor(provider: buildProvider(house: house))
+    }
+
+    func buildPresenter(house: String, wireframe: CharactersListWireframe) -> ListPresenterContract {
+        CharactersListPresenter(interactor: buildInteractor(house: house), wireframe: wireframe)
+    }
+
 }

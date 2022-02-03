@@ -16,7 +16,6 @@ protocol ListViewContract: UIViewController {
 protocol ListPresenterContract: AnyObject {
     var viewList: ListViewController? {set get}
     var viewCollection: CollectionViewController? {set get}
-    var interactor: ListInteractorContract? {set get}
     var numItems: Int {get}
     
     func viewDidLoad()
@@ -27,7 +26,6 @@ protocol ListPresenterContract: AnyObject {
 }
 
 protocol ListInteractorContract: AnyObject {
-    var charactersProvider: CharacterProviderContract? {get set}
     var output: ListInteractorOutputContract? {get set}
     func fetchItems()
 }
