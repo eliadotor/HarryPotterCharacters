@@ -12,7 +12,8 @@ struct Wand: Codable {
     let core: String
 }
 
-struct Character : Codable {
+struct Character : Codable, Equatable {
+
     let name: String
     let alternate_names: [String]
     let species: String
@@ -20,7 +21,7 @@ struct Character : Codable {
     let dateOfBirth: String
     let wizard: Bool
     let ancestry: String
-    let wand: Wand
+    //let wand: Wand
     let patronus: String
     let hogwartsStudent: Bool
     let hogwartsStaff: Bool
