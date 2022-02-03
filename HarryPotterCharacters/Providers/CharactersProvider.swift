@@ -10,7 +10,7 @@ import Alamofire
 
 
 enum CharacterProviderError: Error {
-    case generic(Error?)
+    case badUrl, generic(Error?)
 }
 
 class NetworkCharactersProvider: CharacterProviderContract {

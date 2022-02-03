@@ -14,10 +14,11 @@ class UserFormInteractor: UserFormInteractorContract {
     func fetchUser() {
         userProvider?.loadUser({ result in
             switch result {
-            case .none:
+            case .success(let user):
+                self.output?.didFetchUser(user!)
+            case .failure:
                 self.output?.fetchDidFail()
-            case .some(let user):
-                self.output?.didFetchUser(user)
+            
             }
         })
     }

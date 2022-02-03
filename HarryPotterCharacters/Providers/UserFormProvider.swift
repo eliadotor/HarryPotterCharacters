@@ -8,11 +8,12 @@
 import Foundation
 
 enum UserFormProviderError: Error {
-    case badUrl, generic(Error?)
+    case loadError, generic(Error?)
 }
+
 protocol UserFormProviderContract {
     func saveUser(_ user: UserFormModel)
-    func loadUser(_ completion: @escaping (UserFormModel?) -> ())
+    func loadUser(_ completion: @escaping (Result<UserFormModel?, UserFormProviderError>) -> ())
 }
 
 
@@ -40,27 +41,25 @@ class UserDefaultsProvider: UserFormProviderContract {
             let data = try encoder.encode(user)
             try data.write(to: url)
         } catch {
-            print("Error save")
+            print(error)
         }
     }
     
-    func loadUser(_ completion: @escaping (UserFormModel?) -> ()) {
+    func loadUser(_ completion: @escaping (Result<UserFormModel?, UserFormProviderError>) -> ()) {
         DispatchQueue.global().async {
             guard let url = self.fileUrl else {
-                completion(nil)
+                completion(.success(nil))
                 return
             }
-            
             guard let data = try? Data(contentsOf: url) else {
-                completion(nil)
+                completion(.success(nil))
                 return
             }
-            
             do {
                 let user = try PropertyListDecoder().decode(UserFormModel.self, from: data)
-                completion(user)
+                completion(.success(user))
             } catch {
-                print("Error load")
+                completion(.failure(.loadError))
 
             }
         }
