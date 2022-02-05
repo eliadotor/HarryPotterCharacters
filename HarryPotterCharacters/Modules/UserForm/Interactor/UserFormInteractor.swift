@@ -21,7 +21,7 @@ class UserFormInteractor: UserFormInteractorContract {
         userProvider?.loadUser({ result in
             switch result {
             case .success(let user):
-                self.output?.didFetchUser(user!)
+                self.output?.didFetchUser(user ?? UserFormModel())
             case .failure:
                 self.output?.fetchDidFail()
             

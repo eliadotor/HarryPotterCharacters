@@ -33,7 +33,6 @@
 		459233BE27ABD9A4004CAD89 /* CharactersListInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459233BD27ABD9A4004CAD89 /* CharactersListInteractorTests.swift */; };
 		459233C827AC3682004CAD89 /* HarryPotterCharactersIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459233C727AC3682004CAD89 /* HarryPotterCharactersIntegrationTests.swift */; };
 		459233CF27AC36EA004CAD89 /* CharactersProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459233CE27AC36EA004CAD89 /* CharactersProviderTests.swift */; };
-		459233D127AC3924004CAD89 /* UserFormInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459233D027AC3924004CAD89 /* UserFormInteractorTests.swift */; };
 		45CDAF9D27A8607000FE3C73 /* UserFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CDAF9C27A8607000FE3C73 /* UserFormViewController.swift */; };
 		45CDAF9F27A8609900FE3C73 /* UserFormViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45CDAF9E27A8609900FE3C73 /* UserFormViewController.storyboard */; };
 		45CDAFA327A861EF00FE3C73 /* UserFormContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CDAFA227A861EF00FE3C73 /* UserFormContract.swift */; };
@@ -120,7 +119,6 @@
 		459233C527AC3682004CAD89 /* HarryPotterCharactersIntegrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HarryPotterCharactersIntegrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		459233C727AC3682004CAD89 /* HarryPotterCharactersIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarryPotterCharactersIntegrationTests.swift; sourceTree = "<group>"; };
 		459233CE27AC36EA004CAD89 /* CharactersProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersProviderTests.swift; sourceTree = "<group>"; };
-		459233D027AC3924004CAD89 /* UserFormInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFormInteractorTests.swift; sourceTree = "<group>"; };
 		45CDAF9C27A8607000FE3C73 /* UserFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFormViewController.swift; sourceTree = "<group>"; };
 		45CDAF9E27A8609900FE3C73 /* UserFormViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserFormViewController.storyboard; sourceTree = "<group>"; };
 		45CDAFA227A861EF00FE3C73 /* UserFormContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFormContract.swift; sourceTree = "<group>"; };
@@ -390,7 +388,6 @@
 			children = (
 				45CE378027A41C77007B6BC8 /* HarryPotterCharactersTests.swift */,
 				459233BD27ABD9A4004CAD89 /* CharactersListInteractorTests.swift */,
-				459233D027AC3924004CAD89 /* UserFormInteractorTests.swift */,
 			);
 			path = HarryPotterCharactersTests;
 			sourceTree = "<group>";
@@ -861,7 +858,6 @@
 			files = (
 				459233BE27ABD9A4004CAD89 /* CharactersListInteractorTests.swift in Sources */,
 				45CE378127A41C77007B6BC8 /* HarryPotterCharactersTests.swift in Sources */,
-				459233D127AC3924004CAD89 /* UserFormInteractorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

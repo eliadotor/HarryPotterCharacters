@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gVv-Iu-73i">
+                            <scrollView multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gVv-Iu-73i">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OBA-SH-SlW">
@@ -76,7 +76,7 @@
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rVm-u1-5Yn">
                                                                         <rect key="frame" x="126.5" y="0.0" width="227.5" height="20.5"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                        <textInputTraits key="textInputTraits"/>
+                                                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" textContentType="username"/>
                                                                         <connections>
                                                                             <action selector="inputChanged:" destination="Y6W-OH-hqX" eventType="editingChanged" id="SLl-KC-HWz"/>
                                                                         </connections>
@@ -95,7 +95,7 @@
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OrS-Xl-sYv">
                                                                         <rect key="frame" x="129.5" y="0.0" width="224.5" height="20.5"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                        <textInputTraits key="textInputTraits"/>
+                                                                        <textInputTraits key="textInputTraits" keyboardType="phonePad" textContentType="tel"/>
                                                                         <connections>
                                                                             <action selector="inputChanged:" destination="Y6W-OH-hqX" eventType="editingChanged" id="QCX-WH-Mba"/>
                                                                         </connections>
@@ -114,7 +114,7 @@
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WPJ-p0-Xtw">
                                                                         <rect key="frame" x="112.5" y="0.0" width="241.5" height="20.5"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                        <textInputTraits key="textInputTraits"/>
+                                                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
                                                                         <connections>
                                                                             <action selector="inputChanged:" destination="Y6W-OH-hqX" eventType="editingChanged" id="Mek-hr-zdM"/>
                                                                         </connections>
@@ -167,14 +167,14 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="354" height="31"/>
                                                                 <subviews>
                                                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" title="Location permission" translatesAutoresizingMaskIntoConstraints="NO" id="k3g-cH-bGx">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="2" height="31"/>
                                                                         <color key="onTintColor" red="0.07526252036265435" green="0.43011427417243875" blue="0.18722595025116504" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <connections>
                                                                             <action selector="locationPermission:" destination="Y6W-OH-hqX" eventType="valueChanged" id="feH-EX-ab2"/>
                                                                         </connections>
                                                                     </switch>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kqh-Gq-U8Z">
-                                                                        <rect key="frame" x="69" y="0.0" width="285" height="31"/>
+                                                                        <rect key="frame" x="20" y="0.0" width="334" height="31"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -214,7 +214,6 @@
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="Send"/>
                                                                 <connections>
-                                                                    <action selector="scrollViewTapped:" destination="Y6W-OH-hqX" eventType="editingChanged" id="ONI-0T-708"/>
                                                                     <action selector="sendPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="COm-rS-jyC"/>
                                                                 </connections>
                                                             </button>
@@ -241,15 +240,11 @@
                                 </subviews>
                                 <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstItem="OBA-SH-SlW" firstAttribute="bottom" secondItem="w01-qN-v1w" secondAttribute="bottom" constant="818" id="1Uy-Oc-iPo"/>
+                                    <constraint firstItem="OBA-SH-SlW" firstAttribute="bottom" secondItem="w01-qN-v1w" secondAttribute="bottom" id="1Uy-Oc-iPo"/>
                                     <constraint firstItem="OBA-SH-SlW" firstAttribute="leading" secondItem="w01-qN-v1w" secondAttribute="leading" id="7Qb-2z-TTI"/>
-                                    <constraint firstItem="g6P-Cr-6sC" firstAttribute="bottom" secondItem="OBA-SH-SlW" secondAttribute="bottom" id="CST-Gw-vMk"/>
-                                    <constraint firstItem="OBA-SH-SlW" firstAttribute="leading" secondItem="g6P-Cr-6sC" secondAttribute="leading" id="PGL-Wi-UY6"/>
                                     <constraint firstItem="OBA-SH-SlW" firstAttribute="top" secondItem="w01-qN-v1w" secondAttribute="top" id="Syl-gF-3aA"/>
                                     <constraint firstItem="OBA-SH-SlW" firstAttribute="width" secondItem="g6P-Cr-6sC" secondAttribute="width" id="YYL-i8-V5m"/>
-                                    <constraint firstItem="OBA-SH-SlW" firstAttribute="top" secondItem="g6P-Cr-6sC" secondAttribute="top" id="oE1-wo-Sgi"/>
-                                    <constraint firstItem="OBA-SH-SlW" firstAttribute="trailing" secondItem="w01-qN-v1w" secondAttribute="trailing" constant="414" id="oHv-fM-Lar"/>
-                                    <constraint firstItem="g6P-Cr-6sC" firstAttribute="trailing" secondItem="OBA-SH-SlW" secondAttribute="trailing" id="pjx-fT-rW5"/>
+                                    <constraint firstItem="OBA-SH-SlW" firstAttribute="trailing" secondItem="w01-qN-v1w" secondAttribute="trailing" id="oHv-fM-Lar"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="w01-qN-v1w"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="g6P-Cr-6sC"/>
