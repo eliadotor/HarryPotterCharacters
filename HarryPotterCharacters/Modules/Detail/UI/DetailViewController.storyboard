@@ -20,92 +20,120 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Mc-o9-X69">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="761"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="765.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="OgH-Gj-9f8">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="761"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="765.5"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="38N-Oj-9mT">
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="600"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="414" id="LTE-az-W7I"/>
-                                                            <constraint firstAttribute="height" constant="600" id="te4-ie-PaY"/>
+                                                            <constraint firstAttribute="width" constant="414" id="LTE-az-W7I">
+                                                                <variation key="heightClass=regular-widthClass=regular" constant="820"/>
+                                                            </constraint>
+                                                            <constraint firstAttribute="height" constant="600" id="te4-ie-PaY">
+                                                                <variation key="heightClass=regular-widthClass=regular" constant="850"/>
+                                                            </constraint>
                                                         </constraints>
                                                     </imageView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="n4A-fB-D0A">
-                                                        <rect key="frame" x="0.0" y="600" width="414" height="161"/>
+                                                        <rect key="frame" x="0.0" y="600" width="414" height="165.5"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YXM-kk-03Y">
-                                                                <rect key="frame" x="0.0" y="0.0" width="414" height="29"/>
+                                                                <rect key="frame" x="15" y="15" width="391" height="24"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text="Name Character" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bdZ-Or-Qjw">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="182.5" height="29"/>
-                                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="153.5" height="24"/>
+                                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
+                                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                                        </variation>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="House" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Zq-fI-kaZ">
-                                                                        <rect key="frame" x="182.5" y="0.0" width="231.5" height="29"/>
-                                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                                        <rect key="frame" x="153.5" y="0.0" width="237.5" height="24"/>
+                                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
+                                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                                        </variation>
                                                                     </label>
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cph-W9-fIk">
-                                                                <rect key="frame" x="0.0" y="49" width="414" height="24"/>
+                                                                <rect key="frame" x="15" y="59" width="391" height="19.5"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text="Patronus" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WJj-5k-qfG">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="85" height="24"/>
-                                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="70" height="19.5"/>
+                                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
+                                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                                        </variation>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="999" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W5Y-qc-cQi">
-                                                                        <rect key="frame" x="85" y="0.0" width="329" height="24"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                                        <rect key="frame" x="70" y="0.0" width="321" height="19.5"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
+                                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                                        </variation>
                                                                     </label>
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sbn-9e-AU2">
-                                                                <rect key="frame" x="0.0" y="93" width="414" height="24"/>
+                                                                <rect key="frame" x="15" y="98.5" width="391" height="19.5"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text="Date of birth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G64-24-Qmb">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="117.5" height="24"/>
-                                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="97" height="19.5"/>
+                                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
+                                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                                        </variation>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="999" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="giF-nr-Ki7">
-                                                                        <rect key="frame" x="117.5" y="0.0" width="296.5" height="24"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                                        <rect key="frame" x="97" y="0.0" width="294" height="19.5"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
+                                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                                        </variation>
                                                                     </label>
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xrB-q5-CB4">
-                                                                <rect key="frame" x="0.0" y="137" width="414" height="24"/>
+                                                                <rect key="frame" x="15" y="138" width="391" height="19.5"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CP5-lg-lF1">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="55" height="24"/>
-                                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="45" height="19.5"/>
+                                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
+                                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                                        </variation>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="72H-Sm-hHF">
-                                                                        <rect key="frame" x="55" y="0.0" width="359" height="24"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                                        <rect key="frame" x="45" y="0.0" width="346" height="19.5"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
                                                             </stackView>
                                                         </subviews>
+                                                        <edgeInsets key="layoutMargins" top="15" left="15" bottom="8" right="8"/>
                                                     </stackView>
                                                 </subviews>
+                                                <variation key="heightClass=compact-widthClass=regular" axis="vertical"/>
+                                                <variation key="heightClass=regular-widthClass=regular" axis="vertical"/>
                                             </stackView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -127,6 +155,11 @@
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="yb0-2p-dMZ"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="3N8-80-gRZ"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="subviews">
+                                        <include reference="5Mc-o9-X69"/>
+                                    </mask>
+                                </variation>
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
@@ -139,15 +172,15 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="date" destination="giF-nr-Ki7" id="Bed-yE-tyU"/>
-                        <outlet property="dateLabel" destination="G64-24-Qmb" id="Eir-c6-kIx"/>
-                        <outlet property="detailImage" destination="38N-Oj-9mT" id="cxO-Qw-wgj"/>
-                        <outlet property="labelHouse" destination="6Zq-fI-kaZ" id="9NA-7d-WAx"/>
-                        <outlet property="nameActor" destination="72H-Sm-hHF" id="G01-PJ-eES"/>
-                        <outlet property="nameCharacter" destination="bdZ-Or-Qjw" id="gJE-lW-aGj"/>
-                        <outlet property="nameLabelActor" destination="CP5-lg-lF1" id="PTT-hs-FqN"/>
-                        <outlet property="patronus" destination="W5Y-qc-cQi" id="OP7-ds-r6q"/>
-                        <outlet property="patronusLabel" destination="WJj-5k-qfG" id="tdF-uY-XMs"/>
+                        <outlet property="date" destination="giF-nr-Ki7" id="Jms-fR-GVG"/>
+                        <outlet property="dateLabel" destination="G64-24-Qmb" id="1aQ-l7-hl8"/>
+                        <outlet property="detailImage" destination="38N-Oj-9mT" id="MzC-NU-E0Z"/>
+                        <outlet property="labelHouse" destination="6Zq-fI-kaZ" id="747-Gw-CHC"/>
+                        <outlet property="nameActor" destination="72H-Sm-hHF" id="5i0-L3-eAL"/>
+                        <outlet property="nameCharacter" destination="bdZ-Or-Qjw" id="ehH-22-TNJ"/>
+                        <outlet property="nameLabelActor" destination="CP5-lg-lF1" id="vJC-CL-Y6z"/>
+                        <outlet property="patronus" destination="W5Y-qc-cQi" id="MR6-oL-7WY"/>
+                        <outlet property="patronusLabel" destination="WJj-5k-qfG" id="jd6-1F-gjT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
