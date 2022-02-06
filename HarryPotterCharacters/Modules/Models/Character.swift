@@ -20,8 +20,6 @@ struct Character : Codable, Equatable {
     let house: String
     let dateOfBirth: String
     let wizard: Bool
-    let ancestry: String
-    //let wand: Wand
     let patronus: String
     let hogwartsStudent: Bool
     let hogwartsStaff: Bool

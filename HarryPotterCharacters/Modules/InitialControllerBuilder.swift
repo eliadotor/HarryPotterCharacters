@@ -10,7 +10,6 @@ import UIKit
 
 class InitialControllerBuilder {
     
-    
     func build() -> UIViewController {
         let tabBarController = UITabBarController()
         let viewControllers = [buildList(), CollectionControllerBuilder().builderForTabBar(tag: 1), UserFormBuilder().builderForTabBar(tag: 2)]

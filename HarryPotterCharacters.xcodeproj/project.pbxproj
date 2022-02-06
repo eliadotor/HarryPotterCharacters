@@ -98,6 +98,7 @@
 		4500E47A27AFF4DC00123B45 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		4500E48027B020E700123B45 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4500E48227B0216900123B45 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4500E48327B044C200123B45 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		451F832027A9A65E0014E855 /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
 		451F832427AAAD850014E855 /* PermissionsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionsInteractor.swift; sourceTree = "<group>"; };
 		451F832627AAAD9A0014E855 /* PermissionsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionsPresenter.swift; sourceTree = "<group>"; };
@@ -204,6 +205,8 @@
 		4500E47C27B0207300123B45 /* Supporting files */ = {
 			isa = PBXGroup;
 			children = (
+				45CE377227A41C76007B6BC8 /* Assets.xcassets */,
+				4500E47A27AFF4DC00123B45 /* Colors.xcassets */,
 				4500E48127B020E700123B45 /* Localizable.strings */,
 			);
 			path = "Supporting files";
@@ -359,6 +362,7 @@
 		45CE375D27A41C72007B6BC8 = {
 			isa = PBXGroup;
 			children = (
+				4500E48327B044C200123B45 /* README.md */,
 				45CE376827A41C72007B6BC8 /* HarryPotterCharacters */,
 				45CE377F27A41C77007B6BC8 /* HarryPotterCharactersTests */,
 				45CE378927A41C77007B6BC8 /* HarryPotterCharactersUITests */,
@@ -383,16 +387,13 @@
 		45CE376827A41C72007B6BC8 /* HarryPotterCharacters */ = {
 			isa = PBXGroup;
 			children = (
+				45CE376927A41C72007B6BC8 /* AppDelegate.swift */,
+				45CE376B27A41C72007B6BC8 /* SceneDelegate.swift */,
 				45CE37B427A43983007B6BC8 /* Extensions */,
 				45CE37A527A423AD007B6BC8 /* Providers */,
 				45CE379C27A41E88007B6BC8 /* Modules */,
-				45CE379927A41D07007B6BC8 /* Models */,
-				45CE376927A41C72007B6BC8 /* AppDelegate.swift */,
-				45CE376B27A41C72007B6BC8 /* SceneDelegate.swift */,
-				45CE377227A41C76007B6BC8 /* Assets.xcassets */,
 				45CE377427A41C76007B6BC8 /* LaunchScreen.storyboard */,
 				45CE377727A41C76007B6BC8 /* Info.plist */,
-				4500E47A27AFF4DC00123B45 /* Colors.xcassets */,
 				4500E47C27B0207300123B45 /* Supporting files */,
 			);
 			path = HarryPotterCharacters;
@@ -428,6 +429,7 @@
 		45CE379C27A41E88007B6BC8 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				45CE379927A41D07007B6BC8 /* Models */,
 				451F832327AAAD4E0014E855 /* Permissions */,
 				45CDAF9A27A8602A00FE3C73 /* UserForm */,
 				453A6D1B27A6EB8D0000AE1B /* HousesCollection */,
