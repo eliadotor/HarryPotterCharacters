@@ -13,7 +13,6 @@ class HousesCollectionViewController: UIViewController {
     
     private var houses = [String]()
     var presenter: HousesCollectionPresenterContract?
-    var interactor: HousesCollectionInteractorContract?
     
     override func viewDidLoad() {
         super.viewDidLoad()

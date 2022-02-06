@@ -12,7 +12,6 @@ class CollectionViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     var presenter: ListPresenterContract?
-    var interactor: ListInteractorContract?
 
     
     override func viewDidLoad() {

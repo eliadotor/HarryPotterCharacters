@@ -36,6 +36,14 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var patronusLabel: UILabel!
     @IBOutlet weak var patronus: UILabel!
     
+    @IBOutlet weak var closeButton: UIButton!
+    @IBAction func closePressed(_ sender: Any) {
+        if let navigationController = navigationController {
+            navigationController.popViewController(animated: true)
+        } else {
+            dismiss(animated: true)
+        }
+    }
     var presenter: DetailPresenterContract?
     
     override func viewDidLoad() {
@@ -60,6 +68,8 @@ extension DetailViewController: DetailViewContract {
         }
         DispatchQueue.main.async { [self] in
             self.detailImage.kf.setImage(with: viewModel.imageUrl, placeholder: UIImage(named: viewModel.house))
+            closeButton.imageView?.backgroundColor = color
+            closeButton.imageView?.layer.cornerRadius = 25
             nameCharacter.text = "\(viewModel.name) - "
             labelHouse.text = viewModel.house
             labelHouse.textColor = color

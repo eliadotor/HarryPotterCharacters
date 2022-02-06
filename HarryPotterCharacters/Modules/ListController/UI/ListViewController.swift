@@ -12,7 +12,6 @@ class ListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var presenter: ListPresenterContract?
-    var interactor: ListInteractorContract?
     
     override func viewDidLoad() {
         super.viewDidLoad()
