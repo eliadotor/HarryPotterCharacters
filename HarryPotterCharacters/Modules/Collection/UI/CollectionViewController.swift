@@ -39,8 +39,13 @@ class CollectionViewController: UIViewController {
         layout.minimumInteritemSpacing = 10
         layout.minimumLineSpacing = 10
         layout.sectionInset = UIEdgeInsets(top: 20, left: 10, bottom: 20, right: 10)
-        let width = (collectionView.frame.width / 3) - (layout.minimumInteritemSpacing/3) - layout.sectionInset.left
-        layout.itemSize = CGSize(width: width, height: width*2-(width/4))
+        if UIDevice.current.orientation.isLandscape {
+            let width = (collectionView.frame.width / 4) - (layout.minimumInteritemSpacing/4) - layout.sectionInset.left
+            layout.itemSize = CGSize(width: width, height: width)
+        } else {
+            let width = (collectionView.frame.width / 3) - (layout.minimumInteritemSpacing/3) - layout.sectionInset.left
+            layout.itemSize = CGSize(width: width, height: width*2-(width/4))
+        }
         return layout
     }
 }
