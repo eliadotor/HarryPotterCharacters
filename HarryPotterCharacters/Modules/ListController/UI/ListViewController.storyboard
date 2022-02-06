@@ -33,8 +33,12 @@
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4lj-87-eVL">
                                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50.5"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="50" id="REb-6k-UFN"/>
-                                                                <constraint firstAttribute="width" constant="50" id="dEi-C2-tfZ"/>
+                                                                <constraint firstAttribute="height" constant="50" id="REb-6k-UFN">
+                                                                    <variation key="heightClass=regular-widthClass=regular" constant="100"/>
+                                                                </constraint>
+                                                                <constraint firstAttribute="width" constant="50" id="dEi-C2-tfZ">
+                                                                    <variation key="heightClass=regular-widthClass=regular" constant="100"/>
+                                                                </constraint>
                                                             </constraints>
                                                         </imageView>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ACV-AO-XKs">
@@ -45,6 +49,9 @@
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
+                                                                    <variation key="heightClass=regular-widthClass=regular">
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                                    </variation>
                                                                 </label>
                                                             </subviews>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>

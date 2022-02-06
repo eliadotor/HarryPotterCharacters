@@ -29,8 +29,24 @@ class HousesCollectionViewController: UIViewController {
         housesCollectionView.setCollectionViewLayout(layout, animated: false)
 
     }
-        
+
     private var layout: UICollectionViewFlowLayout {
+        let layout = UICollectionViewFlowLayout()
+        layout.minimumInteritemSpacing = 20
+        layout.minimumLineSpacing = 20
+        layout.sectionInset = UIEdgeInsets(top: 20, left: 20, bottom: 30, right: 20)
+        if UIDevice.current.orientation.isLandscape {
+            let width = (housesCollectionView.frame.width / 4) - (layout.minimumInteritemSpacing/4) - layout.sectionInset.left
+            layout.itemSize = CGSize(width: width, height: width)
+        } else {
+            let width = (housesCollectionView.frame.width / 2) - (layout.minimumInteritemSpacing/2) - layout.sectionInset.left
+            layout.itemSize = CGSize(width: width, height: width)
+        }
+        return layout
+        
+    }
+    
+    func buildLayout() -> UICollectionViewFlowLayout {
         let layout = UICollectionViewFlowLayout()
         layout.minimumInteritemSpacing = 20
         layout.minimumLineSpacing = 20
