@@ -16,14 +16,65 @@ struct UserFormViewModel {
 
 class UserFormViewController: UIViewController {
     
-    @IBOutlet weak var nameInput: UITextField!
+    @IBOutlet weak var titleLabel: UILabel! {
+        didSet {
+            titleLabel.text = "user_form_title".localized
+        }
+    }
+    
+    @IBOutlet weak var subheadLabel: UILabel! {
+        didSet {
+            subheadLabel.text = "user_form_subhead".localized
+        }
+    }
+    
+    @IBOutlet weak var nameInput: UITextField! 
     @IBOutlet weak var phoneInput: UITextField!
     @IBOutlet weak var mailInput: UITextField!
-    @IBOutlet weak var nameLabel: UILabel!
+    
+    @IBOutlet weak var nameLabel: UILabel! {
+        didSet {
+            nameLabel.text = "user_form_name_label".localized
+        }
+    }
+    
+    @IBOutlet weak var phoneLabel: UILabel! {
+        didSet {
+            phoneLabel.text = "user_form_phone_label".localized
+        }
+    }
+    
+    @IBOutlet weak var mailLabel: UILabel! {
+        didSet {
+            mailLabel.text = "user_form_mail_label".localized
+        }
+    }
+    
+    @IBOutlet weak var aboutLabel: UILabel! {
+        didSet {
+            aboutLabel.text = "user_form_user_data_label".localized
+        }
+    }
+    
     @IBOutlet weak var userDataTextArea: UITextView!
     @IBOutlet weak var switchButton: UISwitch!
-    @IBOutlet weak var permissionLabel: UILabel!
-    @IBOutlet weak var infoLabel: UILabel!
+    @IBOutlet weak var permissionLabel: UILabel! {
+        didSet {
+            permissionLabel.text = "permission_label".localized
+        }
+    }
+    
+    @IBOutlet weak var infoLabel: UILabel! {
+        didSet {
+            infoLabel.text = "permission_info".localized
+        }
+    }
+    
+    @IBOutlet weak var button: UIButton! {
+        didSet {
+            button.setTitle("user_form_button_text".localized, for: .normal) 
+        }
+    }
     
     var presenter: UserFormPresenterContract?
     
@@ -120,11 +171,11 @@ extension UserFormViewController: UserFormContract {
         didUpdateValidation(input: mailInput, valid: valid)
     }
     func showValidation() {
-        showNotification(title: "Confirmación de validación", message: "Se han enviado los datos", textButton: "Aceptar")
+        showNotification(title: "user_form_alert_title".localized, message: "user_form_alert_message".localized, textButton: "user_form_alert_button".localized)
     }
     
     func showValidationError() {
-        showNotification(title: "Error de validación", message: "Por favor revisa los campos", textButton: "Aceptar")
+        showNotification(title: "user_form_error_alert_title".localized, message: "user_form_error_alert_message".localized, textButton: "user_form_alert_button".localized)
     }
     
     func showNotification(title: String, message: String, textButton: String) {
@@ -139,7 +190,7 @@ extension UserFormViewController: UserFormContract {
     func setAllowed() {
         DispatchQueue.main.async {
             self.switchButton.isEnabled = false
-            self.permissionLabel.text = "Localización permitida"
+            self.permissionLabel.text = "permission_label_allow".localized
             self.switchButton.isOn = true
             self.infoLabel.isHidden = true
         }
@@ -148,9 +199,9 @@ extension UserFormViewController: UserFormContract {
     func setNotAllowed() {
         DispatchQueue.main.async {
             self.switchButton.isEnabled = true
-            self.permissionLabel.text = "¿Permitir acceder a su ubicación?"
+            self.permissionLabel.text = "permission_label".localized
             self.switchButton.isOn = false
-            self.infoLabel.text = "Los datos muggles solo se usarán en caso de que no se acepte el permiso de ubicación"
+            self.infoLabel.text = "permission_info".localized
         }
     }
     

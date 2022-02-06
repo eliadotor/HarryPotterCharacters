@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2713DB89925E9E17BDDF5969 /* Pods_HarryPotterCharactersTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5201EBC356CAEF92A054C8F /* Pods_HarryPotterCharactersTests.framework */; };
 		4500E47B27AFF4DC00123B45 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4500E47A27AFF4DC00123B45 /* Colors.xcassets */; };
+		4500E47F27B020E700123B45 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4500E48127B020E700123B45 /* Localizable.strings */; };
 		451F832127A9A65E0014E855 /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451F832027A9A65E0014E855 /* DetailInteractor.swift */; };
 		451F832527AAAD850014E855 /* PermissionsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451F832427AAAD850014E855 /* PermissionsInteractor.swift */; };
 		451F832727AAAD9A0014E855 /* PermissionsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451F832627AAAD9A0014E855 /* PermissionsPresenter.swift */; };
@@ -95,6 +96,8 @@
 		2FDC4AFDE889DA2D72616F57 /* Pods-HarryPotterCharactersTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HarryPotterCharactersTests.debug.xcconfig"; path = "Target Support Files/Pods-HarryPotterCharactersTests/Pods-HarryPotterCharactersTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4421CE28EF2B6FB61E7A101E /* Pods_HarryPotterCharacters_HarryPotterCharactersUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HarryPotterCharacters_HarryPotterCharactersUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4500E47A27AFF4DC00123B45 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		4500E48027B020E700123B45 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4500E48227B0216900123B45 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		451F832027A9A65E0014E855 /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
 		451F832427AAAD850014E855 /* PermissionsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionsInteractor.swift; sourceTree = "<group>"; };
 		451F832627AAAD9A0014E855 /* PermissionsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionsPresenter.swift; sourceTree = "<group>"; };
@@ -198,6 +201,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4500E47C27B0207300123B45 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				4500E48127B020E700123B45 /* Localizable.strings */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
 		451F832227A9C3660014E855 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
@@ -382,6 +393,7 @@
 				45CE377427A41C76007B6BC8 /* LaunchScreen.storyboard */,
 				45CE377727A41C76007B6BC8 /* Info.plist */,
 				4500E47A27AFF4DC00123B45 /* Colors.xcassets */,
+				4500E47C27B0207300123B45 /* Supporting files */,
 			);
 			path = HarryPotterCharacters;
 			sourceTree = "<group>";
@@ -642,6 +654,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = 45CE375D27A41C72007B6BC8;
 			productRefGroup = 45CE376727A41C72007B6BC8 /* Products */;
@@ -672,6 +685,7 @@
 				453A6D0A27A6B6B40000AE1B /* CollectionViewController.storyboard in Resources */,
 				45CE37C027A4731F007B6BC8 /* DetailViewController.storyboard in Resources */,
 				453A6D2727A6ED550000AE1B /* HousesCollectionViewController.storyboard in Resources */,
+				4500E47F27B020E700123B45 /* Localizable.strings in Resources */,
 				45CE377627A41C76007B6BC8 /* LaunchScreen.storyboard in Resources */,
 				4500E47B27AFF4DC00123B45 /* Colors.xcassets in Resources */,
 				45CE377327A41C76007B6BC8 /* Assets.xcassets in Resources */,
@@ -895,6 +909,15 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		4500E48127B020E700123B45 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4500E48027B020E700123B45 /* en */,
+				4500E48227B0216900123B45 /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		45CE377427A41C76007B6BC8 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -946,6 +969,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -1007,6 +1031,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";

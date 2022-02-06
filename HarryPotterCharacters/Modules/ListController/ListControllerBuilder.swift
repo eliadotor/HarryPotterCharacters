@@ -10,9 +10,10 @@ import UIKit
 import Alamofire
 
 class ListControllerBuilder {
+    private let title = "list_navigation_title".localized
     func build(house: String)-> UIViewController {
         let viewController = ListViewController.createFromStoryBoard()
-        viewController.navigationItem.title = "\(house) House"
+        viewController.navigationItem.title =  "\(house) \(title)"
         let wireframe = CharactersListWireframe()
         viewController.presenter = buildPresenter(house: house, wireframe: wireframe)
         wireframe.view = viewController

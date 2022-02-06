@@ -20,7 +20,7 @@ class CollectionControllerBuilder {
  
     func builderForTabBar(tag: Int) -> UIViewController {
         let viewController = build()
-        viewController.tabBarItem = .init(title: "Collection", image: UIImage.init(systemName: "rectangle.stack.person.crop.fill"), tag: tag)
+        viewController.tabBarItem = .init(title: "tab_bar_tag_collection".localized, image: UIImage.init(systemName: "rectangle.stack.person.crop.fill"), tag: tag)
         return viewController
     }
     

@@ -29,14 +29,33 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var detailImage: UIImageView!
     @IBOutlet weak var nameCharacter: UILabel!
     @IBOutlet weak var labelHouse: UILabel!
-    @IBOutlet weak var nameLabelActor: UILabel!
+    
+    @IBOutlet weak var nameLabelActor: UILabel!  {
+        didSet {
+            nameLabelActor.text = "detail_actor_label".localized
+        }
+    }
+    
     @IBOutlet weak var nameActor: UILabel!
-    @IBOutlet weak var dateLabel: UILabel!
+    
+    @IBOutlet weak var dateLabel: UILabel! {
+        didSet {
+            dateLabel.text = "detail_date_label".localized
+        }
+    }
+    
     @IBOutlet weak var date: UILabel!
-    @IBOutlet weak var patronusLabel: UILabel!
+    
+    @IBOutlet weak var patronusLabel: UILabel! {
+        didSet {
+            patronusLabel.text = "detail_patronus_label".localized
+        }
+    }
+    
     @IBOutlet weak var patronus: UILabel!
     
     @IBOutlet weak var closeButton: UIButton!
+    
     @IBAction func closePressed(_ sender: Any) {
         if let navigationController = navigationController {
             navigationController.popViewController(animated: true)
@@ -44,6 +63,7 @@ class DetailViewController: UIViewController {
             dismiss(animated: true)
         }
     }
+    
     var presenter: DetailPresenterContract?
     
     override func viewDidLoad() {
@@ -66,6 +86,7 @@ extension DetailViewController: DetailViewContract {
                 return UIColor.black
             }
         }
+        
         DispatchQueue.main.async { [self] in
             self.detailImage.kf.setImage(with: viewModel.imageUrl, placeholder: UIImage(named: viewModel.house))
             closeButton.imageView?.backgroundColor = color
@@ -73,11 +94,8 @@ extension DetailViewController: DetailViewContract {
             nameCharacter.text = "\(viewModel.name) - "
             labelHouse.text = viewModel.house
             labelHouse.textColor = color
-            nameLabelActor.text = "Actor: "
             nameActor.text = viewModel.actor
-            patronusLabel.text = "Patronus: "
             patronus.text = viewModel.patronus
-            dateLabel.text = "Fecha de nacimiento: "
             date.text = viewModel.dateOfBirth
         }
     }

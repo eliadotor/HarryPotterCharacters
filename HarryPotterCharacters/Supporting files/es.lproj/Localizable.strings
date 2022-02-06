@@ -1,0 +1,36 @@
+/* 
+  Localizable.strings
+  HarryPotterCharacters
+
+  Created by Elia Dotor Puente on 6/2/22.
+  
+*/
+
+"list_navigation_title" = "";
+
+"detail_patronus_label" = "Patronus: ";
+"detail_date_label" = "Fecha de nacimiento: ";
+"detail_actor_label" = "Actor: ";
+
+"houses_collection_title" = "Casas de Hogwarts";
+
+"user_form_title" = "¿Quieres recibir tu carta de hogwarts?";
+"user_form_subhead" = "Todavía estás a tiempo, ¡rellena tus datos!";
+"user_form_name_label" = "Nombre Muggle:";
+"user_form_phone_label" = "Móvil Muggle:";
+"user_form_mail_label" = "Email Muggle:";
+"user_form_user_data_label" = "Sobre ti";
+"user_form_button_text" = "Enviar";
+"user_form_alert_title" = "Confiramción de envio";
+"user_form_alert_message" = "Se han enviado los datos correctamente";
+"user_form_alert_button" = "Aceptar";
+"user_form_error_alert_title" = "Error de validación";
+"user_form_error_alert_message" = "Por favor, revisa los campos";
+
+"permission_label" = "¿Permite acceder a su ubicación?";
+"permission_label_allow" = "Localización permitida";
+"permission_info" = "Los datos muggles solo se usarán en caso de que no acepte usar magia para acceder a su ubicación";
+
+"tab_bar_tag_list" = "Lista";
+"tab_bar_tag_collection" = "Colección";
+"tab_bar_tag_form" = "Formulario";

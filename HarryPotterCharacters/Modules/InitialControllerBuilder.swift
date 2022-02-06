@@ -23,12 +23,7 @@ class InitialControllerBuilder {
 private extension InitialControllerBuilder {
     func buildList() -> UINavigationController {
         let viewController = HousesCollectionControllerBuilder().build()
-        let tabBarItem = UITabBarItem(title: "List", image: UIImage.init(systemName: "list.bullet"), tag: 0)
-        return buildNavigation(with: viewController, tabBarItem: tabBarItem)
-    }
-    func buildCollection() -> UINavigationController {
-        let viewController = CollectionControllerBuilder().build()
-        let tabBarItem = UITabBarItem(title: "Collection", image: UIImage.init(systemName: "pencil"), tag: 1)
+        let tabBarItem = UITabBarItem(title: "tab_bar_tag_list".localized, image: UIImage.init(systemName: "list.bullet"), tag: 0)
         return buildNavigation(with: viewController, tabBarItem: tabBarItem)
     }
 
@@ -40,7 +35,7 @@ private extension InitialControllerBuilder {
     
     func buildForm() -> UIViewController {
         let viewController = UserFormBuilder().build()
-        viewController.tabBarItem = UITabBarItem.init(title: "Form", image: UIImage(systemName: "pencil.and.outline"), tag: 2)
+        viewController.tabBarItem = UITabBarItem.init(title: "tab_bar_tag_form".localized, image: UIImage(systemName: "pencil.and.outline"), tag: 2)
         return viewController
     }
     

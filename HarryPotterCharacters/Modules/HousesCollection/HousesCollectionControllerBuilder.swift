@@ -9,10 +9,10 @@ import Foundation
 import UIKit
 
 class HousesCollectionControllerBuilder {
-    
+    private let title = "houses_collection_title".localized
     func build()-> UIViewController {
         let viewController = HousesCollectionViewController.createFromStoryBoard()
-        viewController.navigationItem.title = "Hogwarts houses"
+        viewController.navigationItem.title = title
         let wireframe = HousesCollectionWireframe()
         viewController.presenter = buildPresenter(wireframe: wireframe)
         wireframe.view = viewController

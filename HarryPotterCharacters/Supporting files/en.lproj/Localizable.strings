@@ -1,0 +1,36 @@
+/* 
+  Localizable.strings
+  HarryPotterCharacters
+
+  Created by Elia Dotor Puente on 6/2/22.
+  
+*/
+
+"list_navigation_title" = "house";
+
+"detail_patronus_label" = "Patronus: ";
+"detail_date_label" = "Date of birth: ";
+"detail_actor_label" = "Actor: ";
+
+"houses_collection_title" = "Hogwarts houses";
+
+"user_form_title" = "Do you want to receive your hogwarts letter?";
+"user_form_subhead" = "You're still on time, fill in your details!";
+"user_form_name_label" = "Muggle Name:";
+"user_form_phone_label" = "Muggle Phone:";
+"user_form_mail_label" = "Muggle Mail:";
+"user_form_user_data_label" = "About you";
+"user_form_button_text" = "Send";
+"user_form_alert_title" = "Confirmation of sending ";
+"user_form_alert_message" = "The data has been sent correctly";
+"user_form_alert_button" = "Accept";
+"user_form_error_alert_title" = "Validation error";
+"user_form_error_alert_message" = "Please, check the fields";
+
+"permission_label" = "Do you agree to access your location?";
+"permission_label_allow" = "Allowed location";
+"permission_info" = "Muggle data will only be used in case you do not agree to access your location";
+
+"tab_bar_tag_list" = "List";
+"tab_bar_tag_collection" = "Collection";
+"tab_bar_tag_form" = "Form";
