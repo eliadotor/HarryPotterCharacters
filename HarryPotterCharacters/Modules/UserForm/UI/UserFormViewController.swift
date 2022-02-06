@@ -119,14 +119,22 @@ extension UserFormViewController: UserFormContract {
     func didValidateMail(_ valid: Bool) {
         didUpdateValidation(input: mailInput, valid: valid)
     }
+    func showValidation() {
+        showNotification(title: "Confirmación de validación", message: "Se han enviado los datos", textButton: "Aceptar")
+    }
     
     func showValidationError() {
+        showNotification(title: "Error de validación", message: "Por favor revisa los campos", textButton: "Aceptar")
+    }
+    
+    func showNotification(title: String, message: String, textButton: String) {
         DispatchQueue.main.async {
-            let alert = UIAlertController(title: "Error de validación", message: "Por favor revisa los campos", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Aceptar", style: .default))
+            let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: textButton, style: .default))
             self.present(alert, animated: true)
         }
     }
+
     
     func setAllowed() {
         DispatchQueue.main.async {

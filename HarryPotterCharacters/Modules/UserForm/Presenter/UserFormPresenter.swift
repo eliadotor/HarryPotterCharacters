@@ -43,7 +43,9 @@ class UserFormPresenter: UserFormPresenterContract {
     }
     
     func didPressSend() {
-        guard userFormModel.isValid else {
+        if userFormModel.isValid {
+            view?.showValidation()
+        } else {
             view?.showValidationError()
             return
         }
