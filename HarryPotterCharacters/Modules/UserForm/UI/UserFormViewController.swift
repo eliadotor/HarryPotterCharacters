@@ -192,7 +192,7 @@ extension UserFormViewController: UserFormContract {
             self.switchButton.isEnabled = false
             self.permissionLabel.text = "permission_label_allow".localized
             self.switchButton.isOn = true
-            self.infoLabel.isHidden = true
+            self.infoLabel.text = "permission_info_allow".localized
         }
     }
     

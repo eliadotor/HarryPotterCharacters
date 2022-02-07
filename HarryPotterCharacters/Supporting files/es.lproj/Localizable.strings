@@ -21,7 +21,7 @@
 "user_form_mail_label" = "Email Muggle:";
 "user_form_user_data_label" = "Sobre ti";
 "user_form_button_text" = "Enviar";
-"user_form_alert_title" = "Confiramción de envio";
+"user_form_alert_title" = "Confiramción de envío";
 "user_form_alert_message" = "Se han enviado los datos correctamente";
 "user_form_alert_button" = "Aceptar";
 "user_form_error_alert_title" = "Error de validación";
@@ -30,6 +30,7 @@
 "permission_label" = "¿Permite acceder a su ubicación?";
 "permission_label_allow" = "Localización permitida";
 "permission_info" = "Los datos muggles solo se usarán en caso de que no acepte usar magia para acceder a su ubicación";
+"permission_info_allow" = "Una lechuza te entregará tu carta";
 
 "tab_bar_tag_list" = "Lista";
 "tab_bar_tag_collection" = "Colección";
