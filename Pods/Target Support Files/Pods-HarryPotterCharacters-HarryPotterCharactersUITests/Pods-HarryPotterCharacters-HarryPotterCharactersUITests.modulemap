@@ -1,0 +1,6 @@
+framework module Pods_HarryPotterCharacters_HarryPotterCharactersUITests {
+  umbrella header "Pods-HarryPotterCharacters-HarryPotterCharactersUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
