@@ -32,6 +32,7 @@
 		453A6D2F27A707740000AE1B /* HousesViewContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453A6D2E27A707740000AE1B /* HousesViewContract.swift */; };
 		453A6D3127A70BD90000AE1B /* HousesCollectionInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453A6D3027A70BD90000AE1B /* HousesCollectionInteractor.swift */; };
 		453A6D3327A713600000AE1B /* HouseCollectionWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453A6D3227A713600000AE1B /* HouseCollectionWireframe.swift */; };
+		458AA39E27B1840100783192 /* UserFormInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458AA39D27B1840100783192 /* UserFormInteractorTests.swift */; };
 		459233BE27ABD9A4004CAD89 /* CharactersListInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459233BD27ABD9A4004CAD89 /* CharactersListInteractorTests.swift */; };
 		459233C827AC3682004CAD89 /* HarryPotterCharactersIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459233C727AC3682004CAD89 /* HarryPotterCharactersIntegrationTests.swift */; };
 		459233CF27AC36EA004CAD89 /* CharactersProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459233CE27AC36EA004CAD89 /* CharactersProviderTests.swift */; };
@@ -121,6 +122,7 @@
 		453A6D2E27A707740000AE1B /* HousesViewContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousesViewContract.swift; sourceTree = "<group>"; };
 		453A6D3027A70BD90000AE1B /* HousesCollectionInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousesCollectionInteractor.swift; sourceTree = "<group>"; };
 		453A6D3227A713600000AE1B /* HouseCollectionWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseCollectionWireframe.swift; sourceTree = "<group>"; };
+		458AA39D27B1840100783192 /* UserFormInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFormInteractorTests.swift; sourceTree = "<group>"; };
 		459233BD27ABD9A4004CAD89 /* CharactersListInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListInteractorTests.swift; sourceTree = "<group>"; };
 		459233C527AC3682004CAD89 /* HarryPotterCharactersIntegrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HarryPotterCharactersIntegrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		459233C727AC3682004CAD89 /* HarryPotterCharactersIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarryPotterCharactersIntegrationTests.swift; sourceTree = "<group>"; };
@@ -392,6 +394,7 @@
 				45CE37B427A43983007B6BC8 /* Extensions */,
 				45CE37A527A423AD007B6BC8 /* Providers */,
 				45CE379C27A41E88007B6BC8 /* Modules */,
+				45CE379927A41D07007B6BC8 /* Models */,
 				45CE377427A41C76007B6BC8 /* LaunchScreen.storyboard */,
 				45CE377727A41C76007B6BC8 /* Info.plist */,
 				4500E47C27B0207300123B45 /* Supporting files */,
@@ -404,6 +407,7 @@
 			children = (
 				45CE378027A41C77007B6BC8 /* HarryPotterCharactersTests.swift */,
 				459233BD27ABD9A4004CAD89 /* CharactersListInteractorTests.swift */,
+				458AA39D27B1840100783192 /* UserFormInteractorTests.swift */,
 			);
 			path = HarryPotterCharactersTests;
 			sourceTree = "<group>";
@@ -429,7 +433,6 @@
 		45CE379C27A41E88007B6BC8 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				45CE379927A41D07007B6BC8 /* Models */,
 				451F832327AAAD4E0014E855 /* Permissions */,
 				45CDAF9A27A8602A00FE3C73 /* UserForm */,
 				453A6D1B27A6EB8D0000AE1B /* HousesCollection */,
@@ -878,6 +881,7 @@
 			files = (
 				459233BE27ABD9A4004CAD89 /* CharactersListInteractorTests.swift in Sources */,
 				45CE378127A41C77007B6BC8 /* HarryPotterCharactersTests.swift in Sources */,
+				458AA39E27B1840100783192 /* UserFormInteractorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

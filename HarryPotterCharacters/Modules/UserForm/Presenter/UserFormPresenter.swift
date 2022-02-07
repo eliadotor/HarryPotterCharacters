@@ -43,9 +43,7 @@ class UserFormPresenter: UserFormPresenterContract {
     }
     
     func didPressSend() {
-        if userFormModel.isValid {
-            view?.showValidation()
-        } else {
+        if !userFormModel.isValid {
             view?.showValidationError()
             return
         }
@@ -66,6 +64,15 @@ extension UserFormPresenter: UserFormInteractorOutputContract {
     }
     
     func fetchDidFail() {
+        print("Error")
+    }
+    
+    func didSaveUser(_ user: UserFormModel) {
+        self.userFormModel = user
+        view?.showConfirmation()
+    }
+    
+    func saveDidFail() {
         print("Error")
     }
     

@@ -31,7 +31,15 @@ class UserFormInteractor: UserFormInteractorContract {
     
     
     func saveUser(_ user: UserFormModel) {
-        userProvider?.saveUser(user)
+        userProvider?.saveUser(user, { result in
+            switch result {
+            case .success(let user):
+                self.output?.didSaveUser(user ?? UserFormModel())
+            case .failure:
+                self.output?.saveDidFail()
+            
+            }
+        })
     }
     
 }

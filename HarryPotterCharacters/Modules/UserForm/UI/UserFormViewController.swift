@@ -170,7 +170,7 @@ extension UserFormViewController: UserFormContract {
     func didValidateMail(_ valid: Bool) {
         didUpdateValidation(input: mailInput, valid: valid)
     }
-    func showValidation() {
+    func showConfirmation() {
         showNotification(title: "user_form_alert_title".localized, message: "user_form_alert_message".localized, textButton: "user_form_alert_button".localized)
     }
     

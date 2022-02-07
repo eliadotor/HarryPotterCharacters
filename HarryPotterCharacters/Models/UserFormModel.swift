@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct UserFormModel: Codable {
+struct UserFormModel: Codable, Equatable {
     var name:String?
     var phone:String?
     var mail: String?

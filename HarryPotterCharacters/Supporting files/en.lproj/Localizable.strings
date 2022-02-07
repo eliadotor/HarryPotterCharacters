@@ -21,7 +21,7 @@
 "user_form_mail_label" = "Muggle Mail:";
 "user_form_user_data_label" = "About you";
 "user_form_button_text" = "Send";
-"user_form_alert_title" = "Confirmation of sending";
+"user_form_alert_title" = "Confirmation";
 "user_form_alert_message" = "Data has been sent correctly";
 "user_form_alert_button" = "Accept";
 "user_form_error_alert_title" = "Validation error";

@@ -18,7 +18,7 @@ protocol UserFormContract: UIViewController {
     func didValidateName(_ valid: Bool)
     func didValidatePhone(_ valid: Bool)
     func didValidateMail(_ valid: Bool)
-    func showValidation()
+    func showConfirmation()
     func showValidationError()
     
     func setAllowed()
@@ -47,5 +47,7 @@ protocol UserFormInteractorContract {
 protocol UserFormInteractorOutputContract: AnyObject {
     func didFetchUser(_ user: UserFormModel)
     func fetchDidFail()
+    func didSaveUser(_ user: UserFormModel)
+    func saveDidFail()
 
 }

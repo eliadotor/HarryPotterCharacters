@@ -12,8 +12,9 @@ class CharactersListInteractorTests: XCTestCase {
         
     class MockCharactersProvider: CharacterProviderContract {
         
-        let characters: [Character] = [.init(name: "Harry", alternate_names: [], species: "human", house: "Gryffindor", dateOfBirth: "22-03-1991", wizard: true, ancestry: "", patronus: "Deer", hogwartsStudent: true, hogwartsStaff: false, actor: "Daniel Radcliffe", image: ""),
-                                       .init(name: "Hermione", alternate_names: [], species: "human", house: "Gryffindor", dateOfBirth: "02-04-1991", wizard: true, ancestry: "", patronus: "Otter", hogwartsStudent: true, hogwartsStaff: false, actor: "Emma Watson", image: "")]
+        let characters: [Character] = [
+            .init(name: "Harry", alternate_names: [], species: "human", house: "Gryffindor", dateOfBirth: "22-03-1991", wizard: true,  patronus: "Deer", hogwartsStudent: true, hogwartsStaff: false, actor: "Daniel Radcliffe", image: ""),
+            .init(name: "Hermione", alternate_names: [], species: "human", house: "Gryffindor", dateOfBirth: "02-04-1991", wizard: true, patronus: "Otter", hogwartsStudent: true, hogwartsStaff: false, actor: "Emma Watson", image: "")]
         
         var shouldFail = false
         
@@ -50,13 +51,12 @@ class CharactersListInteractorTests: XCTestCase {
     }
     
     let provider = MockCharactersProvider()
-    let sut = CharactersListInteractor()
+    let sut = CharactersListInteractor(provider: MockCharactersProvider())
 
     func testShouldFetchCharacters() {
         let expectation = expectation(description: "")
         let output = MockListInteractorOutput(expectation: expectation)
         
-        sut.charactersProvider = provider
         sut.output = output
         sut.fetchItems()
         
@@ -67,11 +67,11 @@ class CharactersListInteractorTests: XCTestCase {
     }
     
     func testShouldNotify() {
+        let sut = CharactersListInteractor(provider: provider)
         let expectation = expectation(description: "")
         provider.shouldFail = true
         let output = MockListInteractorOutput(expectation: expectation)
         
-        sut.charactersProvider = provider
         sut.output = output
         sut.fetchItems()
         

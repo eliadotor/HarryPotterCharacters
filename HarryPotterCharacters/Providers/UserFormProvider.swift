@@ -8,11 +8,11 @@
 import Foundation
 
 enum UserFormProviderError: Error {
-    case loadError, generic(Error?)
+    case loadError, saveError, generic(Error?)
 }
 
 protocol UserFormProviderContract {
-    func saveUser(_ user: UserFormModel)
+    func saveUser(_ user: UserFormModel, _ completion: @escaping (Result<UserFormModel?, UserFormProviderError>) -> ())
     func loadUser(_ completion: @escaping (Result<UserFormModel?, UserFormProviderError>) -> ())
 }
 
@@ -31,7 +31,7 @@ class UserDefaultsProvider: UserFormProviderContract {
         return url
     }
     
-    func saveUser(_ user: UserFormModel) {
+    func saveUser(_ user: UserFormModel, _ completion: @escaping (Result<UserFormModel?, UserFormProviderError>) -> ()) {
         guard let url = fileUrl else {
             return
         }
@@ -40,8 +40,9 @@ class UserDefaultsProvider: UserFormProviderContract {
         do {
             let data = try encoder.encode(user)
             try data.write(to: url)
+            completion(.success(user))
         } catch {
-            print(error)
+            completion(.failure(.saveError))
         }
     }
     
